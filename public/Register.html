@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+</head>
+<body>
+    <div class="flex min-h-full" id="app_main_content" data-v-app>
+        <!-- Auth fluid left content -->
+        <div class="flex items-center justify-center bg-gray-100 min-h-screen" style="width: 35%;">
+        <div class="card-body">
+          <div class="max-w-md w-full p-6">
+            <!-- Logo -->
+            <div class="text-center md:text-left mb-6">
+              <a class="flex items-center justify-center md:justify-start cursor-pointer" href="#hero">
+                <img class="h-12 mx-2" src="Images/handmade.png" alt="website logo" />
+                <span class="text-2xl font-bold">TLN</span>
+              </a>
+            </div>
+            <!-- Title -->
+            <h4 class="text-2xl font-semibold mb-4">Đăng nhập</h4>
+            <!-- Form -->
+            <form>
+              <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Gmail</label>
+                <input class="border border-gray-300 rounded-md p-2 w-full" type="email" id="emailaddress" required tabindex="1">
+              </div>
+              <div class="mb-4">
+                <div class="flex justify-between items-center">
+                  <label class="block text-gray-700">Mật khẩu</label>
+                </div>
+                <input class="border border-gray-300 rounded-md p-2 w-full" type="password" required tabindex="2">
+              </div>
+              <div class="mb-4">
+                <div class="flex justify-between items-center">
+                  <label class="block text-gray-700">Nhập lại mật khẩu</label>
+                </div>
+                <input class="border border-gray-300 rounded-md p-2 w-full" type="password" required tabindex="2">
+              </div>
+              <div class="d-grid mt-4 text-center"><button class="btn btn-info btn-block" onclick="Register()" tabindex="3"><i
+                class="mdi mdi-login"></i> Đăng ký </button></div>
+            </form>
+            <!-- Footer-->
+            <footer class="mt-6 text-center">
+              <p class="text-gray-500">Đã có tài khoản?
+                <a href="" class="text-blue-500 ml-1" tabindex="5">
+                  <b>Đăng nhập</b>
+                </a>
+              </p>
+            </footer>
+          </div>
+        </div>
+        </div>
+        <!-- End auth-fluid-left -->
+        
+        <!-- Auth fluid right content -->
+        <div class="flex-1 flex items-center justify-center bg-cover bg-center" style="background-image: url('Images/background.png');">
+            <div class="form-box bg-white p-10 rounded-lg shadow-lg">
+            <h2 class="text-4xl mb-3 text-center">Tin tốt là bất cứ ai cũng có thể học lập trình !!</h2>
+            <p class="text-lg leading-relaxed text-center">
+              <i class="mdi mdi-format-quote-open"></i> Vì vậy, đừng bỏ lỡ cơ hội này để học hỏi, cạnh tranh và giành được những phần thưởng hấp dẫn từ các cuộc thi lập trình trực tuyến. 
+              <i class="mdi mdi-format-quote-close"></i>
+            </p>
+            <p class="mt-4 text-center">- cuocthilaptrinh.com</p>
+          </div>
+        </div>
+        <!-- End auth-fluid-right -->
+      </div>
+      
+      
+      
+</body>
+</html>
+
