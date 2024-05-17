@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Ramabhadra", sans-serif;
+    src: url('../font/Ramabhadra-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: "Ramabhadra", sans-serif;
+  }
+
+  .line {
+    background-color: #895f53;
+    content: "";
+    height: 3px;
+    width: 50px;
+    margin-top: 10px;
+  }
+  
+  .line_sm {
+    background-color: #895f53;
+    content: "";
+    height: 2px;
+    width: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+/* Hero */
+.slider{
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 800px;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    color: #e9e9e9;
+    background-color: rgba(0, 0, 0, 0.177);
+    border: none;
+    font-size: 0px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.slider:hover .buttons button{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+        height: 300px;
+    }
+    .slider .list img{
+        width: 400px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+#hero img, .slider{
+    border-radius: 10px;
+}
+
+
+/* Product list 1 */
+.nav_product .active{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+}
+.list_pro_container{
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}

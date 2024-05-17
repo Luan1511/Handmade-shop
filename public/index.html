@@ -3,15 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TLN Handmade</title>
+    <title>Handmode - Handmade shop</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/HomeStyle.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="shortcut icon" href="Images/Logo_2.png" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -27,22 +22,126 @@
   </head>
   <body class="bg-orange-50">
     <!-- Header -->
-    <header class="fixed w-full bg-orange-50 drop-shadow-lg z-30">
-      <!-- container -->
+    <header
+      class="w-full bg-orange-50 z-30 border-b border-white drop-shadow-md"
+    >
+      <div class="h-20 backdrop-opacity-50 w-full md:w-4/5 p-5 mx-auto">
+        <div class="flex flex-row w-full">
+          <div class="w-1/4">
+            <div
+              class="cursor-pointer w-10 md:w-14 z-30 flex justify-center items-center mx-3 p-1 font-bold"
+              href="#hero"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <img
+                class="md:mx-2 mr-8"
+                src="Images/Logo_2.png"
+                alt="website logo"
+              />
+              <p class="hidden md:block">Handmado</p>
+            </div>
+          </div>
+          <div class="w-2/4 flex justify-center">
+            <form
+              action=""
+              class="flex flex-row text-sm border rounded-md h-10 md:w-full"
+            >
+              <!-- <div class="items-center bg-white">
+                <ul class="search_type_pro my-auto">
+                  Type |
+                  <li>All</li>
+                  <li>Wood product</li>
+                  <li>Vase</li>
+                </ul>
+              </div> -->
+              <select name="" id="" class="rounded-l-md w-10 border-none">
+                <option value="">All</option>
+                <option value="">Wood product</option>
+                <option value="">Vase</option>
+                <option value="">Paper product</option>
+                <option value="">Texit</option>
+                <option value="">Glass</option>
+              </select>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="grow px-5"
+                placeholder="Enter to search..."
+              />
+              <button
+                class="bg-sub_brand text-white rounded-r-md w-10 flex justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 my-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="w-1/4 justify-end flex h-10">
+            <div class="flex bg-yellow-300 pl-2 rounded-lg shadow-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 my-auto"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                />
+              </svg>
+              <div class="my-auto mx-2 hidden md:block">|</div>
+              <button
+                type="button"
+                class="bg-yellow-300 h-full float-end text-xs hidden md:block"
+              >
+                My cart
+              </button>
+              <span class="flex h-2 w-2 translate-x-1 -translate-y-1">
+                <span
+                  class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-500 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-red-500"
+                ></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar  -->
+    <div class="navbar fixed drop-shadow-lg w-full bg-orange-50 z-30">
       <div class="container mx-auto px-4">
         <nav class="flex justify-between items-center py-4">
           <!--Logo-->
           <a
-            class="logo_container cursor-pointer w-10 md:w-14 z-30 flex justify-center items-center mx-3 p-1"
+            class="logo_container cursor-pointer w-10 md:w-14 z-30 flex justify-center items-center ml-8 p-1"
             href="#hero"
           >
-            <img class="mx-2" src="Images/handmade.png" alt="website logo" />
-            TLN
+            <img class="mx-2" src="Images/Logo_2.png" alt="website logo" />
+            Handmode
           </a>
           <!--links-->
-          <ul id="menu" class="nav-menu invisible md:visible z-30">
+          <ul id="menu" class="nav-menu invisible md:visible text-lg z-30">
             <li class="m-10 md:m-0 md:mx-2 lg:mx-8">
-              <a href="#hero" class="nav-link">Home</a>
+              <a href="index.html" class="nav-link">Home</a>
             </li>
             <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
               <a href="#about" class="nav-link">About</a>
@@ -53,7 +152,7 @@
               >
             </li>
             <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="" class="nav-link">Shop</a>
+              <a href="Mainproduct.html" class="nav-link">Shop</a>
             </li>
             <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
               <a href="" class="nav-link">Design</a>
@@ -90,10 +189,10 @@
           </div>
         </nav>
       </div>
-    </header>
+    </div>
 
     <!-- Hero  -->
-    <section id="hero" class="pt-16">
+    <section id="hero">
       <div
         class="relative h-custom_lg_hero -z-10 w-full bg-no-repeat bg-cover grid grid-row-2 md:grid-cols-2 items-center text-center md:text-left"
         style="
@@ -108,37 +207,42 @@
           data-aos-delay="200"
         >
           <h1 class="text-sub_brand text-3xl md:text-6xl font-bold py-5">
-            Welcome to<br />TLN handmade shop
+            Welcome to Handmode
           </h1>
           <p class="md:my-5 md:w-1/2 font-thin">
             Discover the Beauty of Handmade Creations Today!
           </p>
           <div class="py-6">
-            <button class="bg-sub_brand text-white p-2 px-4 rounded-xl m-2">
+            <button
+              class="bg-sub_brand text-white p-2 px-4 rounded-xl m-2 shadow-md"
+            >
               See more
             </button>
             <button
-              class="bg-white text-black border border-gray-300 p-2 px-4 rounded-xl mx-2"
+              class="bg-white text-black border border-gray-300 p-2 px-4 rounded-xl mx-2 shadow-md"
             >
               Get start
             </button>
           </div>
         </div>
-        <div class="mx-3 pr-32 md:m-3.5 pl-28 pb-20 md:pb-0">
+        <div class="mx-3 pr-32 md:m-3.5 pl-28 pb-20 md:pb-0 relative">
           <img
             id="hero_img_1"
             src="Images/handmade_1.png"
-            class="w-full mx-auto"
+            class="w-full mx-auto "
             alt=""
             data-aos="fade-up"
             data-aos-delay="200"
           />
+          <span class="absolute md:h-14 h-10 md:w-14 w-10 top-0 md:top-10 left-1/2 rotate-90">
+            <img src="Images/sale_3.png" alt="" />
+          </span>
         </div>
       </div>
     </section>
     <a href="#product">
       <div
-        class="cursor_cus relative cursor-none text-center text-black bg-orange-50 border border-gray-200 shadow-md"
+        class="cursor_cus relative cursor-none text-center md:text-black text-white md:bg-orange-50 bg-sub_brand border md:border-gray-200 border-none shadow-md"
         style="will-change: auto"
       >
         <p class="absolute top-9 left-5">
@@ -244,7 +348,7 @@
             </div>
           </div>
         </div>
-        <div class="md:rotate-90 lg:my-56 md:-mx-16">
+        <div class="lg:rotate-90 lg:my-56 md:-mx-16">
           <ul class="flex space-x-5 lg:space-x-24">
             <li>
               <i
@@ -1095,6 +1199,8 @@
           <ul
             class="nav_product flex flex-row space-x-3 py-10 text-sm md:text-lg"
             style="padding-top: 20px"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             <li class="active">
               <a class="text-xs md:text-base" href="">New product</a>
@@ -1117,7 +1223,11 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-row items-center">
+        <div
+          class="flex flex-row items-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div class="line"></div>
           <h1
             class="font-bold text-2xl lg:text-4xl w-fit p-3"
@@ -1130,15 +1240,19 @@
           </h1>
           <div class="line"></div>
         </div>
-        <h6 class="mx-auto">New product</h6>
+        <h6 class="mx-auto" data-aos="fade-up" data-aos-delay="100">
+          New product
+        </h6>
         <!-- List product -->
         <div class="flex flex-row w-full px-5 pt-5 md:pt-10 justify-around">
           <!--Product 1-->
           <div
             class="pro_container py-3 md:py-5 w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="150"
           >
             <div
-              class="option_1 text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to cart
@@ -1148,7 +1262,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="ml-2 w-4 md:w-6 h-4 md:h-6"
+                  class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
                 >
                   <path
                     stroke-linecap="round"
@@ -1159,7 +1273,7 @@
               </div>
             </div>
             <div
-              class="option_2 text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to favorist
@@ -1169,7 +1283,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-4 md:w-6 h-4 md:h-6 ml-1 my-auto"
+                  class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
                 >
                   <path
                     stroke-linecap="round"
@@ -1179,18 +1293,21 @@
                 </svg>
               </div>
             </div>
-            <a data-fancybox="img_product" href="Images/product.jpg"
+            <a
+              data-fancybox="img_product"
+              class="img_product"
+              href="Images/product.jpg"
               ><img
                 src="Images/product.jpg"
                 alt=""
-                class="mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+                class="img_pro_1 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
             <h3 class="font-bold">Heart</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $5
             </div>
             <div
-              class="flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
               Maker: Lena_01
             </div>
@@ -1198,9 +1315,11 @@
           <!-- Product 2 -->
           <div
             class="pro_container py-3 md:py-5 w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             <div
-              class="option_1 text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to cart
@@ -1210,7 +1329,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="ml-2 w-4 md:w-6 h-4 md:h-6"
+                  class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
                 >
                   <path
                     stroke-linecap="round"
@@ -1221,7 +1340,7 @@
               </div>
             </div>
             <div
-              class="option_2 text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to favorist
@@ -1231,7 +1350,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-4 md:w-6 h-4 md:h-6 ml-1 my-auto"
+                  class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
                 >
                   <path
                     stroke-linecap="round"
@@ -1241,18 +1360,21 @@
                 </svg>
               </div>
             </div>
-            <a data-fancybox="img_product" href="Images/product_2.jpg"
+            <a
+              data-fancybox="img_product"
+              class="img_product"
+              href="Images/product_2.jpg"
               ><img
                 src="Images/product_2.jpg"
                 alt=""
-                class="mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5 hover:w-4/5"
+                class="img_pro_2 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5 hover:w-4/5"
             /></a>
             <h3 class="font-bold">Chocolate house</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $10
             </div>
             <div
-              class="flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
               Maker: Andrew_01
             </div>
@@ -1260,9 +1382,11 @@
           <!-- Product 3 -->
           <div
             class="pro_container py-3 md:py-5 w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="250"
           >
             <div
-              class="option_1 text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to cart
@@ -1272,7 +1396,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="ml-2 w-4 md:w-6 h-4 md:h-6"
+                  class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
                 >
                   <path
                     stroke-linecap="round"
@@ -1283,7 +1407,7 @@
               </div>
             </div>
             <div
-              class="option_2 text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to favorist
@@ -1293,7 +1417,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-4 md:w-6 h-4 md:h-6 ml-1 my-auto"
+                  class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
                 >
                   <path
                     stroke-linecap="round"
@@ -1303,18 +1427,21 @@
                 </svg>
               </div>
             </div>
-            <a data-fancybox="img_product" href="Images/product_3.jpg"
+            <a
+              data-fancybox="img_product"
+              class="img_product"
+              href="Images/product_3.jpg"
               ><img
                 src="Images/product_3.jpg"
                 alt=""
-                class="mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+                class="img_pro_3 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
             <h3 class="font-bold">Pattern hat</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $3
             </div>
             <div
-              class="flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
               Maker: Lena_01
             </div>
@@ -1322,9 +1449,11 @@
           <!-- Product 4 -->
           <div
             class="pro_container py-3 md:py-5 hidden w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg lg:flex flex-col shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             <div
-              class="option_1 text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to cart
@@ -1334,7 +1463,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="ml-2 w-4 md:w-6 h-4 md:h-6"
+                  class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
                 >
                   <path
                     stroke-linecap="round"
@@ -1345,7 +1474,7 @@
               </div>
             </div>
             <div
-              class="option_2 text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to favorist
@@ -1355,7 +1484,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-4 md:w-6 h-4 md:h-6 ml-1 my-auto"
+                  class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
                 >
                   <path
                     stroke-linecap="round"
@@ -1365,18 +1494,21 @@
                 </svg>
               </div>
             </div>
-            <a data-fancybox="img_product" href="Images/product_5.jpg"
+            <a
+              data-fancybox="img_product"
+              class="img_product"
+              href="Images/product_5.jpg"
               ><img
                 src="Images/product_5.jpg"
                 alt=""
-                class="mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+                class="img_pro_4 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
             <h3 class="font-bold">Lightning glass</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $15
             </div>
             <div
-              class="flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
               Maker: Marco
             </div>
@@ -1384,9 +1516,11 @@
           <!-- Product 5 -->
           <div
             class="pro_container py-3 md:py-5 hidden md:flex w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex-col shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="350"
           >
             <div
-              class="option_1 text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to cart
@@ -1396,7 +1530,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="ml-2 w-4 md:w-6 h-4 md:h-6"
+                  class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
                 >
                   <path
                     stroke-linecap="round"
@@ -1407,7 +1541,7 @@
               </div>
             </div>
             <div
-              class="option_2 text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5"
+              class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
                 Add to favorist
@@ -1417,7 +1551,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-4 md:w-6 h-4 md:h-6 ml-1 my-auto"
+                  class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
                 >
                   <path
                     stroke-linecap="round"
@@ -1427,35 +1561,150 @@
                 </svg>
               </div>
             </div>
-            <a data-fancybox="img_product" href="Images/product_11.jpg"
+            <a
+              data-fancybox="img_product"
+              class="img_product"
+              href="Images/product_11.jpg"
               ><img
                 src="Images/product_11.jpg"
                 alt=""
-                class="mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+                class="img_pro_5 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
             <h3 class="font-bold">Butterfly specimen</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $50
             </div>
             <div
-              class="flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
               Maker: Mr.Tran
             </div>
           </div>
         </div>
-        <button class="mt-10 bg-sub_brand text-white p-2 px-4 rounded-xl m-2">
+        <button
+          class="mt-10 bg-sub_brand text-white p-2 px-4 rounded-xl m-2 shadow-xl"
+        >
           See more...
         </button>
       </div>
     </section>
-    
+    <div
+      class="cursor_pro relative w-full cursor-pointer text-center text-white bg-sub_brand shadow-lg pointer-events-none"
+      style="will-change: auto"
+    >
+      <div
+        class="absolute top-9 left-3 flex flex-row mx-auto space-x-5 -rotate-45"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+          />
+        </svg>
+      </div>
+    </div>
 
-  <!--continue-->
+    <section id="trending_product">
+      <div></div>
+    </section>
 
+    <!--continue-->
 
+    <!--Footer-->
+    <footer class="p-16 pb-10">
+      <div class="rounded-xl bg-sub_brand text-white md:p-6 p-4">
+        <div class="flex md:flex-row flex-col ml-7 justify-center">
+          <div class="md:w-1/3 w-full md:ml-5">
+            <div class="flex flex-row items-center text-3xl mb-3">
+              <img
+                src="Images/Logo_2.png"
+                alt=""
+                class="md:w-20 w-14 md:mr-5 mr-3"
+              />
+              <h1 class="text-2xl">Handmado</h1>
+            </div>
+            <p>
+              We come from the 23AI. <br />
+              Viet-Han University.
+            </p>
+            <div>
+              <span class="text-lg font-bold">Address: </span> Tran Dai Nghia,
+              Hoa Hai, Ngu Hanh Son
+            </div>
+            <div>
+              <span class="text-lg font-bold">Phone: </span>
+              <ul class="ml-5">
+                <li>0389 376 692 (Pham Viet Chi Luan)</li>
+              </ul>
+            </div>
+            <div>
+              <span class="text-lg font-bold">Email:</span> vku.23ai@vku.udn.vn
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row md:w-1/3 justify-around">
+            <div class="md:w-1/3 mt-10 h-full">
+              <h1 class="text-2xl">Products</h1>
+              <ul>
+                <li><a href="" class="cursor-pointer">Wood</a></li>
+                <li><a href="" class="cursor-pointer">Papper</a></li>
+                <li><a href="" class="cursor-pointer">Glass</a></li>
+                <li><a href="" class="cursor-pointer">Nature</a></li>
+              </ul>
+            </div>
 
-
+            <div class="md:w-1/3 w-full mt-10 h-full">
+              <h1 class="text-2xl">Website</h1>
+              <ul>
+                <li><a href="" class="cursor-pointer">Home</a></li>
+                <li><a href="" class="cursor-pointer">About us</a></li>
+                <li><a href="" class="cursor-pointer">Product</a></li>
+                <li><a href="" class="cursor-pointer">Order</a></li>
+                <li><a href="" class="cursor-pointer">Service</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:w-1/3 w-full mt-10 md:pl-10">
+            <h1 class="text-2xl">Follow us:</h1>
+            <div class="flex">
+              <img class="w-10" src="Images/icons8-insta-240.png" alt="" />
+              <img class="w-10" src="Images/icons8-facebook-100.png" alt="" />
+              <img
+                class="w-9 h-9 my-auto mr-1"
+                src="Images/icons8-twitterx-250.png"
+                alt=""
+              />
+              <img
+                class="w-8 h-8 my-auto rounded-md"
+                src="Images/icons8-github-100.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="JS/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

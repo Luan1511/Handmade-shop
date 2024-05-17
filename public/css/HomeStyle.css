@@ -1,9 +1,28 @@
+@font-face {
+  font-family: "Ramabhadra", sans-serif;
+  src: url('../font/Ramabhadra-Regular.ttf') format('truetype');
+}
+
 body {
   font-family: "Ramabhadra", sans-serif;
 }
 
+
+/* Header  */
 header {
   font-weight: 500;
+}
+.navbar{
+  transition: 1s;
+}
+.search_type_pro {
+  display: block;
+}
+.search_type_pro li{
+  visibility: hidden;
+}
+.search_type_pro:hover li{
+  visibility: visible;
 }
 
 /* Hero  */
@@ -38,6 +57,7 @@ header {
 
 .logo_container {
   font-weight: bold;
+  visibility: hidden;
 }
 
 .custom_banner {
@@ -158,8 +178,8 @@ header {
 }
 
 .pro_container:hover {
-  background-color: #895f5369;
-  color: white;
+  background-color: #6c6c6c62;
+  color: rgba(255, 255, 255, 0.099);
   transition: 0.4s;
   align-items: center;
 
@@ -171,23 +191,35 @@ header {
 
 .pro_container {
   transition: 0.4s;
-  cursor: pointer;
   position: relative;
   img{
     transition: 0.4s;
   }
+  h3{
+    cursor: default;
+  }
+  .cost_pro{
+    cursor: default;
+  }
+  .maker{
+    cursor: default;
+  }
 }
 
 .pro_container:hover img {
-  transform: translate(0, -50px);
+  transform: translate(0, -40px);
   transition: 0.6s;
   box-shadow: 0px 3px 5px rgba(29, 29, 29, 0.786);
   cursor: pointer;
 }
 
+.pro_container img:hover{
+  scale: 1.2;
+}
+
 @media screen and (min-width: 768px) {
   .pro_container:hover img {
-    transform: translate(0, -100px);
+    transform: translate(0, -90px);
   }
 }
 
@@ -196,7 +228,6 @@ header {
   transition: 0.6s;
   box-shadow: 0px 3px 5px rgba(29, 29, 29, 0.786);
   background-color: rgb(255, 255, 94)!important;
-  cursor: pointer;
 }
 
 .option_1{
@@ -209,4 +240,13 @@ header {
 
 .pro_container:hover .option_2 {
   visibility: visible;
+}
+
+.cursor_pro {
+  display: none;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
