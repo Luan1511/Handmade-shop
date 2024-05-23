@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TLN Handmade</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/User.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleMenu(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const subMenu = document.getElementById('subMenu');
+            subMenu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-orange-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-orange-50 drop-shadow-lg z-30">
+        <!-- container -->
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <!--Logo-->
+                <a class="logo_container cursor-pointer w-10 md:w-14 z-30 flex justify-center items-center mx-3 p-1"
+                    href="#hero">
+                    <img class="mx-2" src="Images/handmade.png" alt="website logo" />
+                    TLN
+                </a>
+                <!--links-->
+                <ul id="menu" class="nav-menu invisible md:visible z-30">
+                    <li class="m-10 md:m-0 md:mx-2 lg:mx-8">
+                        <a href="#hero" class="nav-link">Home</a>
+                    </li>
+                    <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
+                        <a href="#product" class="nav-link" style="white-space: nowrap">New product</a>
+                    </li>
+                    <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
+                        <a href="" class="nav-link">Shop</a>
+                    </li>
+                    <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
+                        <a href="" class="nav-link">Design</a>
+                    </li>
+                    <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
+                        <a href="" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <!--Menu button-->
+                <div id="menu-btn" class="z-30 md:hidden cursor-pointer md:mx-8 sm:mx-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+                <div class="justify-center hidden md:flex">
+                    <button class="text-sub_brand p-1 px-4">Login</button>
+                    <button class="bg-sub_brand rounded-2xl text-white p-1 px-4 w-24">
+                        Sign up
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ADS -->
+    <section id="ads" style="padding-top: 7rem;">
+        <div class="container text-center">
+            <a href="">
+                <strong>Miễn phí đổi ý & trả hàng 30 ngày</strong>
+            </a>
+        </div>
+    </section>
+
+    <!-- Body -->
+    <section id="main-body" class="pt-5">
+        <div class="container mx-auto flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5">
+            <div class="flex flex-col w-full md:w-1/3 lg:w-1/4 bg-gray-100" style="padding-left: 5rem;">
+                <div class="flex items-center px-4 py-2 bg-gray-100">
+                    <div class="font-bold">nguyennhm3024</div>
+                </div>
+                <div class="flex flex-col bg-white divide-y divide-gray-200">
+                    <!-- <div id="accountMenu" class="space-y-2">
+                        <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100" onclick="toggleMenu(event)">
+                            <span class="mr-2 text-gray-500">👤</span>
+                            <span>Tài Khoản Của Tôi</span>
+                        </a>
+                        <div id="subMenu" class="pl-8 hidden">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Hồ Sơ</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Ngân Hàng</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Địa Chỉ</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Đổi Mật Khẩu</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cài Đặt Thông Báo</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Những Thiết Lập Riêng Tư</a>
+                        </div>
+                    </div> -->
+                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+                        <span class="mr-2 text-gray-500">👤</span>
+                        <span>Tài Khoản Của Tôi</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+                        <span class="mr-2 text-gray-500">📝</span>
+                        <span>Đơn Mua</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+                        <span class="mr-2 text-gray-500">📢</span>
+                        <span>Thông Báo</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-2/3 lg:w-3/4" id="purchase-order">
+                <div class="bg-white p-4">
+                    <div class="flex items-center mb-4">
+                        <a href="#" class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                            id="tat-ca-don">Tất cả đơn</a>
+                        <a href="#" class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                            id="cho-thanh-toan">Chờ thanh toán</a>
+                        <a href="#" class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                            id="dang-xu-ly">Đang xử lý</a>
+                        <a href="#" class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                            id="dang-van-chuyen">Đang vận chuyển</a>
+                        <a href="#" class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800" id="da-giao">Đã
+                            giao</a>
+                        <a href="#" class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800" id="da-huy">Đã
+                            hủy</a>
+
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <input type="text" placeholder="Tìm đơn hàng theo Mã đơn hàng, Nhà bán hoặc Tên sản phẩm"
+                            class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sub_brand">
+                        <button class="ml-2 px-4 py-2 bg-sub_brand text-white rounded-md hover:bg-sub_brand">Tìm đơn
+                            hàng</button>
+                    </div>
+
+                    <!-- No purchase order -->
+                    <div class="flex justify-center items-center" id="no-orders-container">
+                        <div class="text-center">
+                            <img src="/public/Images/No-order.png" alt="Order Image" class="mx-auto mb-4">
+                            <p class="text-gray-600">Chưa có đơn hàng</p>
+                        </div>
+                    </div>
+
+                    <!-- Purchase order -->
+                    <div class="" id="orders-container">
+                        <section class="bg-white rounded-md shadow-md">
+                            <div class="flex items-center mb-4">
+                                <div class="flex items-center text-green-600">
+                                    <span class="mr-2">🛒</span>
+                                    <span>Giao thứ 2, trước 19h, 27/05</span>
+                                </div>
+                                <div class="flex items-center text-gray-500 ml-4">
+                                    <span class="mr-2">⏳</span>
+                                    <span>Chờ xác nhận</span>
+                                    <span class="ml-2">20:18, Thứ Năm 23/05/2024</span>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <img src="https://via.placeholder.com/50x70" alt="Book Image"
+                                    class="w-16 h-20 mr-4">
+                                <div class="flex-1">
+                                    <p class="font-semibold text-lg">Sách Tư Duy Ngược Dịch Chuyển Thế Giới</p>
+                                    <p class="text-gray-500">Tiki Trading</p>
+                                    <p class="text-yellow-500 mt-2">ĐỔI TRẢ 30 NGÀY</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-semibold text-lg">121.800 đ</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-end items-center mt-4">
+                                <p class="font-semibold mr-4">Tổng tiền: 163.800 đ</p>
+                                <button class="px-4 py-2 bg-white text-sub_brand rounded-md hover:bg-sub_brand">Xem
+                                    chi tiết</button>
+                                <button
+                                    class="px-4 py-2 bg-white text-sub_brand rounded-md hover:bg-sub_brand ml-2">Theo
+                                    dõi đơn</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const subMenu = document.getElementById('subMenu');
+            if (subMenu.classList.contains('hidden')) {
+                subMenu.classList.remove('hidden');
+                subMenu.classList.add('max-h-full');
+            } else {
+                subMenu.classList.remove('max-h-full');
+                subMenu.classList.add('hidden');
+            }
+        }
+
+
+        const noOrdersContainer = document.getElementById('no-orders-container');
+
+        const handleTabClick = (event) => {
+            event.preventDefault();
+
+            const tabId = event.target.id;
+            const noOrdersText = {
+                'tat-ca-don': 'Chưa có đơn hàng',
+                'cho-thanh-toan': 'Chưa có đơn hàng chờ thanh toán',
+                'dang-xu-ly': 'Chưa có đơn hàng đang xử lý',
+                'dang-van-chuyen': 'Chưa có đơn hàng đang vận chuyển',
+                'da-giao': 'Chưa có đơn hàng đã giao',
+                'da-huy': 'Chưa có đơn hàng đã hủy'
+            };
+
+            const noOrdersMessage = noOrdersText[tabId] || 'Chưa có đơn hàng';
+
+            const noOrdersContainer = document.getElementById('no-orders-container');
+            const noOrdersMessageElement = noOrdersContainer.querySelector('p');
+            noOrdersContainer.classList.add('slide-leave-active');
+
+            setTimeout(() => {
+                noOrdersMessageElement.textContent = noOrdersMessage;
+                noOrdersContainer.classList.remove('slide-leave-active');
+                noOrdersContainer.classList.add('slide-enter', 'slide-enter-active');
+            }, 300);
+
+            setTimeout(() => {
+                noOrdersContainer.classList.remove('slide-enter', 'slide-enter-active');
+            }, 600);
+        };
+
+        const tabs = document.querySelectorAll('.purchase-order a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', handleTabClick);
+        });
+
+    </script>
+</body>
+
+</html>
