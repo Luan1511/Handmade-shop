@@ -1,0 +1,17 @@
+.card-body {
+    padding: 15% !important;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: var(--ct-card-spacer-y) var(--ct-card-spacer-x);
+    color: var(--ct-card-color)
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
