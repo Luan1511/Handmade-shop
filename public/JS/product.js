@@ -4,6 +4,8 @@ const menuBtn = document.querySelector("#menu-btn")
 
 menuBtn.addEventListener('click',()=>{
     menu.classList.toggle('invisible');
+    document.querySelector('.menuLogo').classList.toggle('hidden');
+    document.querySelector('.header').classList.toggle('hidden');
 })
 
 // Scrolled
@@ -23,12 +25,6 @@ window.addEventListener('scroll', () => {
         navbar.style.top = '0';
     } else {
         navbar.style.top = 'auto';
-    }
-
-    if (scrollPosition > 100) {
-        hero_img_1.style.width = '80%';
-    } else {
-        hero_img_1.style.width = '100%';
     }
 });
 

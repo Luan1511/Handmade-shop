@@ -6,7 +6,7 @@
     <title>Handmode - Handmade shop</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/HomeStyle.css" />
-    <link rel="shortcut icon" href="Images/Logo_2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/Logo_2.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -22,14 +22,40 @@
   </head>
   <body class="bg-orange-50">
     <!-- Header -->
-    <header
-      class="w-full bg-orange-50 z-30 border-b border-white drop-shadow-md"
+    <div
+      class="menuLogo md:hidden md:h-20 h-16 flex justify-center items-center hidden fixed top-0 w-full z-40 pointer-events-none border-b border-gray-300"
     >
-      <div class="h-20 backdrop-opacity-50 w-full md:w-4/5 p-5 mx-auto">
-        <div class="flex flex-row w-full">
+      <div class="my-auto">
+        <div
+          class="cursor-pointer text-black w-10 md:w-14 flex justify-center items-center mx-3 p-1 font-bold"
+          href="#hero"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <div
+            class="left-0 h-14 flex items-center bg-white px-20 mr-10 mt-1 border-b border-gray-300"
+          >
+            <img
+              class="md:mx-2 mr-2 size-8"
+              src="Images/Logo_2.png"
+              alt="website logo"
+            />
+            <p style="font-family: 'Amatic SC', cursive; font-weight: bold">
+              Handmado
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header
+      class="header w-full bg-orange-50 z-20 border-b border-white drop-shadow-md"
+    >
+      <div class="h-16 md:h-20 backdrop-opacity-50 w-full md:w-4/5 p-3 mx-auto">
+        <div class="flex flex-row w-full justify-center my-auto">
           <div class="w-1/4">
             <div
-              class="cursor-pointer w-10 md:w-14 z-30 flex justify-center items-center mx-3 p-1 font-bold"
+              class="cursor-pointer w-10 md:w-14 z-20 flex justify-center items-center mx-3 p-1 font-bold"
               href="#hero"
               data-aos="fade-right"
               data-aos-delay="200"
@@ -39,36 +65,50 @@
                 src="Images/Logo_2.png"
                 alt="website logo"
               />
-              <p class="hidden md:block">Handmado</p>
+              <p
+                class="hidden md:block text-2xl"
+                style="
+                  font-family: 'Amatic SC', cursive !important;
+                  font-weight: bold;
+                "
+              >
+                Handmado
+              </p>
             </div>
           </div>
-          <div class="w-2/4 flex justify-center">
+          <div class="w-2/4 flex justify-center md:my-auto">
             <form
               action=""
               class="flex flex-row text-sm border rounded-md h-10 md:w-full"
+              data-aos="fade-down"
+              data-aos-delay="200"
             >
               <!-- <div class="items-center bg-white">
-                <ul class="search_type_pro my-auto">
-                  Type |
-                  <li>All</li>
-                  <li>Wood product</li>
-                  <li>Vase</li>
-                </ul>
-              </div> -->
-              <select name="" id="" class="rounded-l-md w-10 border-none">
-                <option value="">All</option>
-                <option value="">Wood product</option>
-                <option value="">Vase</option>
-                <option value="">Paper product</option>
-                <option value="">Texit</option>
-                <option value="">Glass</option>
+             <ul class="search_type_pro my-auto">
+               Type |
+               <li>All</li>
+               <li>Wood product</li>
+               <li>Vase</li>
+             </ul>
+           </div> -->
+              <select
+                name=""
+                id=""
+                class="rounded-l-md w-16 border-none text-xs md:text-sm"
+              >
+                <option value="">Tất cả</option>
+                <option value="">Sản phẩm từ gỗ</option>
+                <option value="">Lọ hoa</option>
+                <option value="">Sản phẩm từ giấy</option>
+                <option value="">Dệt may</option>
+                <option value="">Đồ thủy tinh</option>
               </select>
               <input
                 type="text"
                 name=""
                 id=""
-                class="grow px-5"
-                placeholder="Enter to search..."
+                class="grow w-2/3 pl-4"
+                placeholder="Nhập để tìm..."
               />
               <button
                 class="bg-sub_brand text-white rounded-r-md w-10 flex justify-center"
@@ -90,8 +130,14 @@
               </button>
             </form>
           </div>
-          <div class="w-1/4 justify-end flex h-10">
-            <div class="flex bg-yellow-300 pl-2 rounded-lg shadow-sm">
+          <div
+            class="w-1/4 justify-end flex h-10 md:my-auto"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <div
+              class="cart_btn flex cursor-pointer bg-yellow-300 pl-2 rounded-lg shadow-sm"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -111,7 +157,7 @@
                 type="button"
                 class="bg-yellow-300 h-full float-end text-xs hidden md:block"
               >
-                My cart
+                Giỏ hàng
               </button>
               <span class="flex h-2 w-2 translate-x-1 -translate-y-1">
                 <span
@@ -127,44 +173,56 @@
       </div>
     </header>
     <!-- Navbar  -->
-    <div class="navbar fixed drop-shadow-lg w-full bg-orange-50 z-30">
-      <div class="container mx-auto px-4">
-        <nav class="flex justify-between items-center py-4">
+    <div
+      class="navbar fixed drop-shadow-md md:drop-shadow-lg w-full bg-orange-50 z-30"
+    >
+      <div class="container w-full mx-auto md:px-0 px-4">
+        <nav class="flex justify-between items-center w-full md:py-4 py-2">
           <!--Logo-->
           <a
-            class="logo_container cursor-pointer w-10 md:w-14 z-30 flex justify-center items-center ml-8 p-1"
+            class="logo_container cursor-pointer w-2/12 z-30 flex justify-center items-center ml-8 md:ml-0 p-1 invisible"
             href="#hero"
+            style="font-family: 'Amatic SC', cursive; font-weight: bold"
           >
-            <img class="mx-2" src="Images/Logo_2.png" alt="website logo" />
-            Handmode
+            <img class="mx-2 size-8 md:size-12" src="Images/Logo_2.png" alt="website logo" />
+            <p class="md:text-base lg:text-xl">Handmado</p>
           </a>
           <!--links-->
-          <ul id="menu" class="nav-menu invisible md:visible text-lg z-30">
-            <li class="m-10 md:m-0 md:mx-2 lg:mx-8">
-              <a href="index.html" class="nav-link">Home</a>
+          <ul
+            id="menu"
+            class="nav-menu w-8/12 invisible md:visible text-lg z-30 overflow-auto"
+          >
+            <li class="md:h-20 h-16 md:hidden"></li>
+            <li class="first_menuItem m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="index.html" class="nav-link">Trang chủ</a>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="#about" class="nav-link">About</a>
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="#about" class="nav-link">Chúng tôi</a>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="#product" class="nav-link" style="white-space: nowrap"
-                >New product</a
-              >
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="Mainproduct.html" class="nav-link">Cửa hàng</a>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="Mainproduct.html" class="nav-link">Shop</a>
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="" class="nav-link">Đặt thiết kế</a>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="" class="nav-link">Design</a>
+            <li class="m-3 md:m-0 md:ml-2 lg:mx-8">
+              <a href="" class="nav-link">Liên hệ</a>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="" class="nav-link">Contact</a>
+            <li class="m-3 md:m-0 md:mx-0 lg:mx-8 md:hidden">
+              <div class="justify-center md:flex">
+                <button class="text-sub_brand p-1 px-4">Đăng nhập</button>
+                <button
+                  class="bg-sub_brand rounded-2xl text-white p-1 px-4 w-28"
+                >
+                  Đăng ký
+                </button>
+              </div>
             </li>
           </ul>
           <!--Menu button-->
           <div
             id="menu-btn"
-            class="z-30 md:hidden cursor-pointer md:mx-8 sm:mx-6"
+            class="z-50 md:hidden cursor-pointer md:mx-8 sm:mx-6"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +230,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
+              class="w-6 h-6 mt-1"
             >
               <path
                 stroke-linecap="round"
@@ -181,10 +239,10 @@
               />
             </svg>
           </div>
-          <div class="justify-center hidden md:flex">
-            <button class="text-sub_brand p-1 px-4">Login</button>
-            <button class="bg-sub_brand rounded-2xl text-white p-1 px-4 w-24">
-              Sign up
+          <div class="justify-end text-base md:text-sm lg:text-base w-2/12 hidden md:flex">
+            <button class="text-sub_brand p-1 mr-2 w-24">Đăng nhập</button>
+            <button class="bg-sub_brand rounded-2xl text-white p-1 w-24">
+              Đăng ký
             </button>
           </div>
         </nav>
@@ -193,35 +251,36 @@
 
     <!-- Hero  -->
     <section id="hero">
-      <div
-        class="relative h-custom_lg_hero -z-10 w-full bg-no-repeat bg-cover grid grid-row-2 md:grid-cols-2 items-center text-center md:text-left"
-        style="
-          background-image: url(Images/background.png);
-          background-size: cover;
-        "
-      >
+      <div class="relative h-custom_lg_hero -z-10 w-full text-center pt-32">
+        <!-- <video class="video_background" autoplay loop muted playsinline>
+          <source src="Images/hello_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div
           class="md:mx-20 mx-5 justify-center h-1/3 md:h-auto"
           style="margin-right: 0"
           data-aos="fade-down"
           data-aos-delay="200"
         >
-          <h1 class="text-sub_brand text-3xl md:text-6xl font-bold py-5">
-            Welcome to Handmode
+          <h1
+            class="text-white text-3xl md:text-6xl font-bold py-5 shadow-custom pl-2"
+            style="text-shadow: 0px 0px 8px #000000"
+          >
+            CHÀO MỪNG ĐẾN VỚI HANDMADO
           </h1>
-          <p class="md:my-5 md:w-1/2 font-thin">
-            Discover the Beauty of Handmade Creations Today!
+          <p class="md:my-5 text-white md:w-1/2 font-thin">
+            Khám phá thế giới của sản phẩm thủ công!
           </p>
           <div class="py-6">
             <button
-              class="bg-sub_brand text-white p-2 px-4 rounded-xl m-2 shadow-md"
+              class="bg-light_brand text-white p-2 px-4 rounded-xl m-2 shadow-md"
             >
-              See more
+              Xem thêm
             </button>
             <button
               class="bg-white text-black border border-gray-300 p-2 px-4 rounded-xl mx-2 shadow-md"
             >
-              Get start
+              Bắt đầu
             </button>
           </div>
         </div>
@@ -229,14 +288,46 @@
           <img
             id="hero_img_1"
             src="Images/handmade_1.png"
-            class="w-full mx-auto "
+            class="w-full mx-auto"
             alt=""
             data-aos="fade-up"
             data-aos-delay="200"
           />
-          <span class="absolute md:h-14 h-10 md:w-14 w-10 top-0 md:top-10 left-1/2 rotate-90">
-            <img src="Images/sale_3.png" alt="" />
+          <span
+            class="absolute md:h-14 h-10 md:w-14 w-10 top-0 md:top-10 left-1/2 rotate-90"
+          >
+            <img
+              src="Images/sale_3.png"
+              alt=""
+              data-aos="fade-left"
+              data-aos-delay="200"
+            />
           </span>
+        </div> -->
+
+        <div class="flex absolute top-32 left-0 w-full justify-between">
+          <div class="vertical_line"></div>
+          <div class="vertical_line"></div>
+        </div>
+        <div class="flex justify-center items-end space-x-3">
+          <div class="line"></div>
+          <h1
+            class="font-bold text-sub_brand text-2xl w-56 md:text-3xl lg:text-5xl md:w-fit"
+          >
+            MỪNG BẠN ĐẾN HANDMADO
+          </h1>
+          <div class="line"></div>
+        </div>
+        <p class="mt-5 text-sm md:text-lg">Khám phá thế giới đồ thủ công<br>Gửi gắm trí tưởng tượng của bạn</p>
+        <div class="w-full h-1/4 md:h-2/3">
+          <div class="relative size-1/2 mx-auto">
+            <img src="Images/Ellipse_brown.png" class="absolute translate-y-3 md:translate-y-7" alt="" />
+            <img src="Images/handmade_1.png" id="hero_img_1" class="absolute" alt="" />
+          </div>
+        </div>
+        <div class="flex space-x-3 md:space-x-5 mx-auto w-fit md:pt-5">
+          <button class="bg-light_brand text-xs md:text-base w-24 md:w-28 p-2 px-3 rounded-lg shadow-lg">Xem thêm</button>
+          <button class="bg-white text-xs md:text-base w-24 md:w-28 p-2 px-3 rounded-lg shadow-lg">Đăng nhập</button>
         </div>
       </div>
     </section>
@@ -245,8 +336,8 @@
         class="cursor_cus relative cursor-none text-center md:text-black text-white md:bg-orange-50 bg-sub_brand border md:border-gray-200 border-none shadow-md"
         style="will-change: auto"
       >
-        <p class="absolute top-9 left-5">
-          Explore
+        <p class="absolute top-9 left-3">
+          Khám phá
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -272,20 +363,7 @@
       <div
         class="flex lg:flex-row flex-col px-5 items-center lg:items-start -z-10 rounded-3xl bg-white py-16"
       >
-        <div class="lg:w-2/3 w-3/4 justify-center lg:px-16 lg:pl-28">
-          <img
-            src="Images/about.jpg"
-            class="rounded-md"
-            alt=""
-            data-aos="fade-right"
-            data-aos-delay="100"
-          />
-        </div>
-        <div
-          class="w-2/3 text-center flex flex-col"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
+        <div class="main_title lg:hidden flex flex-col justify-center mb-10">
           <div class="flex flex-row items-center mx-auto">
             <div class="line"></div>
             <h1
@@ -295,82 +373,123 @@
                 padding-bottom: 0;
               "
             >
-              About us
+              Chúng tôi
             </h1>
             <div class="line"></div>
           </div>
           <h6 class="mx-auto">Hamedo</h6>
           <div class="line_sm mx-auto h-1"></div>
-          <p class="lg:mt-20 lg:py-6 py-5">Text here</p>
+        </div>
+        <div class="lg:w-2/3 w-3/4 justify-center lg:px-16 lg:pl-28 my-auto">
+          <img
+            src="Images/about.jpg"
+            class="rounded-md first_img"
+            alt=""
+            data-aos="fade-right"
+            data-aos-delay="100"
+            style="object-fit: fill"
+          />
+        </div>
+        <div
+          class="w-2/3 text-center flex flex-col"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div
+            class="sub_title hidden lg:block flex flex-col justify-center items-center"
+          >
+            <div class="flex flex-row items-center justify-center mx-auto">
+              <div class="line"></div>
+              <h1
+                class="font-bold text-xl lg:text-7xl w-fit p-3"
+                style="
+                  background-color: rgba(255, 255, 255, 0.3);
+                  padding-bottom: 0;
+                "
+              >
+                Chúng tôi
+              </h1>
+              <div class="line"></div>
+            </div>
+            <h6 class="mx-auto">Hamedo</h6>
+            <div class="line_sm mx-auto h-1"></div>
+          </div>
+
+          <img class="second_img rounded-lg" src="Images/about.jpg" alt="" />
+
+          <p class="lg:mt-20 my-4 lg:py-6 py-5">Text here</p>
+
           <!--Counter-->
           <div
-            class="flex flex-row text-center justify-around lg:mt-60 bg-sub_brand rounded-3xl m-3"
+            class="counter_contain w-full flex flex-row text-center justify-around lg:mt-60 bg-sub_brand rounded-3xl m-3"
           >
-            <div class="col-lg-3 col-sm-6 p-2 lg:p-7">
+            <div class="col-lg-3 col-sm-6 p-1 md:py-3 lg:p-7">
               <h1
-                class="text-white lg:text-3xl"
+                class="text-white lg:text-3xl text-xs"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                90
+                9000+
               </h1>
-              <h5 class="text-white">Clients</h5>
+              <h5 class="text-white text-xs md:text-base">Khách hàng</h5>
             </div>
-            <div class="col-lg-3 col-sm-6 p-2 lg:p-7">
+            <div class="col-lg-3 col-sm-6 p-1 md:py-3 lg:p-7">
               <h1
-                class="text-white lg:text-3xl"
+                class="text-white lg:text-3xl text-xs"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 1511
               </h1>
-              <h5 class="text-white">Users</h5>
+              <h5 class="text-white text-xs md:text-base">Users</h5>
             </div>
-            <div class="col-lg-3 col-sm-6 p-2 lg:p-7">
+            <div class="col-lg-3 col-sm-6 p-1 md:py-3 lg:p-7">
               <h1
-                class="text-white lg:text-3xl"
+                class="text-white lg:text-3xl text-xs"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 345
               </h1>
-              <h5 class="text-white">Tours</h5>
+              <h5 class="text-white text-xs md:text-base">Tours</h5>
             </div>
-            <div class="col-lg-3 col-sm-6 p-2 lg:p-7">
+            <div class="col-lg-3 col-sm-6 p-1 md:py-3 lg:p-7">
               <h1
-                class="text-white lg:text-3xl"
+                class="text-white lg:text-3xl text-xs"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 2
               </h1>
-              <h5 class="text-white">Years</h5>
+              <h5 class="text-white text-xs md:text-base">Năm</h5>
             </div>
           </div>
         </div>
-        <div class="lg:rotate-90 lg:my-56 md:-mx-16">
-          <ul class="flex space-x-5 lg:space-x-24">
-            <li>
-              <i
-                class="ri-phone-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="ri-mail-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="ri-facebook-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="ri-instagram-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
-              ></i>
-            </li>
-          </ul>
+        <div data-aos="fade-down" data-aos-delay="200">
+          <div class="icon_contact_contain lg:rotate-90 lg:my-56 md:-mx-16">
+            <ul class="flex space-x-5 lg:space-x-24">
+              <li>
+                <i
+                  class="ri-phone-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="ri-mail-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="ri-facebook-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="ri-instagram-fill cursor-pointer lg:text-3xl hover:text-sub_brand"
+                ></i>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- </div> -->
@@ -390,17 +509,15 @@
           <div class="line"></div>
           <h1
             class="font-bold text-xl lg:text-5xl w-fit p-3"
-            style="
-              background-color: rgba(255, 255, 255, 0.3);
-              padding-bottom: 0;
-            "
+            style="padding-bottom: 0"
           >
-            Top maker
+            Xếp hạng cửa hàng
           </h1>
           <div class="line"></div>
         </div>
-        <p class="pb-14">The most love Makers</p>
+        <p class="pb-14">Những cửa hàng được yêu thích nhất trong tháng qua</p>
       </div>
+      <!-- slider -->
       <div
         class="slider bg-white w-4/5 py-4 rounded-2xl shadow-md h-44 md:h-72"
       >
@@ -1185,11 +1302,6 @@
       </div>
     </section>
 
-    <!--Services-->
-    <section class="bg-orange-50" id="service">
-      <!-- <div>Service section</div> -->
-    </section>
-
     <!--Products-->
     <section id="product" class="bg-orange-50 md:p-10 my-10">
       <div
@@ -1203,22 +1315,22 @@
             data-aos-delay="100"
           >
             <li class="active">
-              <a class="text-xs md:text-base" href="">New product</a>
+              <a class="text-xs md:text-base" href="">Sản phẩm mới</a>
               <div class="under_nav_pro"></div>
             </li>
             <li>|</li>
             <li>
-              <a class="text-xs md:text-base" href="">Vase</a>
+              <a class="text-xs md:text-base" href="">Lọ hoa</a>
               <div class="under_nav_pro"></div>
             </li>
             <li>|</li>
             <li>
-              <a class="text-xs md:text-base" href="">Trending product</a>
+              <a class="text-xs md:text-base" href="">Sản phẩm trending</a>
               <div class="under_nav_pro"></div>
             </li>
             <li>|</li>
             <li>
-              <a class="text-xs md:text-base" href="">Furniture</a>
+              <a class="text-xs md:text-base" href="">Đồ nội thất</a>
               <div class="under_nav_pro"></div>
             </li>
           </ul>
@@ -1236,12 +1348,12 @@
               padding-bottom: 0;
             "
           >
-            Product
+            Sản phẩm
           </h1>
           <div class="line"></div>
         </div>
         <h6 class="mx-auto" data-aos="fade-up" data-aos-delay="100">
-          New product
+          Sản phẩm mới
         </h6>
         <!-- List product -->
         <div class="flex flex-row w-full px-5 pt-5 md:pt-10 justify-around">
@@ -1255,7 +1367,7 @@
               class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to cart
+                Thêm vào giỏ hàng
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1276,7 +1388,7 @@
               class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to favorist
+                Thêm vào yêu thích
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1302,14 +1414,14 @@
                 alt=""
                 class="img_pro_1 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
-            <h3 class="font-bold">Heart</h3>
+            <h3 class="font-bold">Trái tim trang trí</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $5
             </div>
             <div
               class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
-              Maker: Lena_01
+              Cửa hàng: Lena_01
             </div>
           </div>
           <!-- Product 2 -->
@@ -1322,7 +1434,7 @@
               class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to cart
+                Thêm vào giỏ hàng
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1343,7 +1455,7 @@
               class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to favorist
+                Thêm vào yêu thích
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1369,14 +1481,14 @@
                 alt=""
                 class="img_pro_2 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5 hover:w-4/5"
             /></a>
-            <h3 class="font-bold">Chocolate house</h3>
+            <h3 class="font-bold">Ngôi nhà socola</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $10
             </div>
             <div
               class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
-              Maker: Andrew_01
+              Cửa hàng: Andrew_01
             </div>
           </div>
           <!-- Product 3 -->
@@ -1389,7 +1501,7 @@
               class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to cart
+                Thêm vào giỏ hàng
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1410,7 +1522,7 @@
               class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to favorist
+                Thêm vào yêu thích
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1436,14 +1548,14 @@
                 alt=""
                 class="img_pro_3 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
-            <h3 class="font-bold">Pattern hat</h3>
+            <h3 class="font-bold">Nón lá với hoa văn</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $3
             </div>
             <div
               class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
-              Maker: Lena_01
+              Cửa hàng: Lena_01
             </div>
           </div>
           <!-- Product 4 -->
@@ -1456,7 +1568,7 @@
               class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to cart
+                Thêm vào giỏ hàng
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1477,7 +1589,7 @@
               class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to favorist
+                Thêm vào yêu thích
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1503,14 +1615,14 @@
                 alt=""
                 class="img_pro_4 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
-            <h3 class="font-bold">Lightning glass</h3>
+            <h3 class="font-bold">Lọ ánh sáng</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $15
             </div>
             <div
               class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
-              Maker: Marco
+              Cửa hàng: Marco
             </div>
           </div>
           <!-- Product 5 -->
@@ -1523,7 +1635,7 @@
               class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to cart
+                Thêm vào giỏ hàng
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1544,7 +1656,7 @@
               class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
             >
               <div class="flex flex-row mx-auto">
-                Add to favorist
+                Thêm vào yêu thích
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1570,24 +1682,27 @@
                 alt=""
                 class="img_pro_5 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
             /></a>
-            <h3 class="font-bold">Butterfly specimen</h3>
+            <h3 class="font-bold">Tiêu bản ngài</h3>
             <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
               $50
             </div>
             <div
               class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
             >
-              Maker: Mr.Tran
+              Cửa hàng: Mr.Tran
             </div>
           </div>
         </div>
         <button
           class="mt-10 bg-sub_brand text-white p-2 px-4 rounded-xl m-2 shadow-xl"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
-          See more...
+          Xem thêm...
         </button>
       </div>
     </section>
+    <!-- Product Cursor  -->
     <div
       class="cursor_pro relative w-full cursor-pointer text-center text-white bg-sub_brand shadow-lg pointer-events-none"
       style="will-change: auto"
@@ -1630,33 +1745,112 @@
       <div></div>
     </section>
 
+    <!-- Service  -->
+    <section id="service" class="w-full bg-orange-50">
+      <div class="flex flex-col pt-5">
+        <div
+          class="flex flex-row items-center mx-auto justify-center md:pb-4"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="line"></div>
+          <h1
+            class="font-bold text-xl lg:text-4xl w-fit p-3"
+            style="
+              background-color: rgba(255, 255, 255, 0.3);
+              padding-bottom: 0;
+            "
+          >
+            Hãy yên tâm bởi vì
+          </h1>
+          <div class="line"></div>
+        </div>
+        <h6 class="mx-auto mb-16" data-aos="fade-up" data-aos-delay="100">
+          Dịch vụ của chúng tôi..
+        </h6>
+
+        <div
+          class="flex md:flex-row flex-col justify-center items-center md:space-x-10 md:space-y-0 space-y-7 mb-20"
+        >
+          <div
+            class="service_contain w-4/5 md:w-1/5 h-56 bg-white rounded-lg shadow-custom text-center flex flex-col justify-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="h-fit w-fit bg-sub_brand mx-auto rounded-lg p-2">
+              <i class="ri-truck-fill text-7xl text-white"></i>
+            </div>
+            <p class="font-bold text-2xl mt-8">Miễn phí vận chuyển</p>
+          </div>
+
+          <div
+            class="service_contain w-4/5 md:w-1/5 h-56 bg-white rounded-lg shadow-custom text-center flex flex-col justify-center"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div class="h-fit w-fit bg-sub_brand mx-auto rounded-lg p-2">
+              <i class="ri-hand-coin-line text-7xl text-white"></i>
+            </div>
+            <p class="font-bold text-2xl mt-8">Giá cả phải chăng</p>
+          </div>
+
+          <div
+            class="service_contain w-4/5 md:w-1/5 h-56 bg-white rounded-lg shadow-custom text-center flex flex-col justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="h-fit w-fit bg-sub_brand mx-auto rounded-lg p-2">
+              <i class="ri-shield-check-fill text-7xl text-white"></i>
+            </div>
+            <p class="font-bold text-2xl mt-8">Uy tín</p>
+          </div>
+
+          <div
+            class="service_contain w-4/5 md:w-1/5 h-56 bg-white rounded-lg shadow-custom text-center flex flex-col justify-center"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <div class="h-fit w-fit bg-sub_brand mx-auto rounded-lg p-2">
+              <i class="ri-customer-service-2-fill text-7xl text-white"></i>
+            </div>
+            <p class="font-bold text-2xl mt-8">Phục vụ 24/7</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!--continue-->
 
-    <!--Footer-->
+    <!-- footer  -->
     <footer class="p-16 pb-10">
-      <div class="rounded-xl bg-sub_brand text-white md:p-6 p-4">
+      <div class="rounded-xl bg-sub_brand text-white md:p-6 p-2">
         <div class="flex md:flex-row flex-col ml-7 justify-center">
           <div class="md:w-1/3 w-full md:ml-5">
-            <div class="flex flex-row items-center text-3xl mb-3">
+            <div class="flex flex-row items-center mb-3">
               <img
                 src="Images/Logo_2.png"
                 alt=""
-                class="md:w-20 w-14 md:mr-5 mr-3"
+                class="lg:w-20 w-14 lg:mr-5 mr-3"
               />
-              <h1 class="text-2xl">Handmado</h1>
+              <h1
+                class="lg:text-2xl md:text-lg sm:text-xl"
+                style="font-family: 'Amatic SC', cursive; font-weight: bold"
+              >
+                Handmado
+              </h1>
             </div>
             <p>
-              We come from the 23AI. <br />
-              Viet-Han University.
+              Chúng tôi đến từ 23AI. <br />
+              Đại học Viet-Han.
             </p>
             <div>
-              <span class="text-lg font-bold">Address: </span> Tran Dai Nghia,
-              Hoa Hai, Ngu Hanh Son
+              <span class="text-lg font-bold">Địa chỉ: </span> Trần Đại Nghĩa,
+              Hòa Hải, Ngũ Hành Sơn
             </div>
             <div>
-              <span class="text-lg font-bold">Phone: </span>
+              <span class="text-lg font-bold">Điện thoại: </span>
               <ul class="ml-5">
-                <li>0389 376 692 (Pham Viet Chi Luan)</li>
+                <li>0389 376 692 (Phạm Viết Chí Luân)</li>
               </ul>
             </div>
             <div>
@@ -1665,28 +1859,32 @@
           </div>
           <div class="flex flex-col md:flex-row md:w-1/3 justify-around">
             <div class="md:w-1/3 mt-10 h-full">
-              <h1 class="text-2xl">Products</h1>
+              <h1 class="lg:text-2xl text-xl">Sản phẩm</h1>
               <ul>
-                <li><a href="" class="cursor-pointer">Wood</a></li>
-                <li><a href="" class="cursor-pointer">Papper</a></li>
-                <li><a href="" class="cursor-pointer">Glass</a></li>
-                <li><a href="" class="cursor-pointer">Nature</a></li>
+                <li><a href="" class="cursor-pointer">Sản phẩm từ gỗ</a></li>
+                <li><a href="" class="cursor-pointer">Sản phẩm từ giấy</a></li>
+                <li>
+                  <a href="" class="cursor-pointer">Sản phẩm thủy tinh</a>
+                </li>
+                <li>
+                  <a href="" class="cursor-pointer">Sản phẩm thiên nhiên</a>
+                </li>
               </ul>
             </div>
 
             <div class="md:w-1/3 w-full mt-10 h-full">
-              <h1 class="text-2xl">Website</h1>
+              <h1 class="lg:text-2xl text-xl">Website</h1>
               <ul>
-                <li><a href="" class="cursor-pointer">Home</a></li>
-                <li><a href="" class="cursor-pointer">About us</a></li>
-                <li><a href="" class="cursor-pointer">Product</a></li>
-                <li><a href="" class="cursor-pointer">Order</a></li>
-                <li><a href="" class="cursor-pointer">Service</a></li>
+                <li><a href="" class="cursor-pointer">Trang chủ</a></li>
+                <li><a href="" class="cursor-pointer">Chúng tôi</a></li>
+                <li><a href="" class="cursor-pointer">Sản phẩm</a></li>
+                <li><a href="" class="cursor-pointer">Đặt hàng</a></li>
+                <li><a href="" class="cursor-pointer">Dịch vụ</a></li>
               </ul>
             </div>
           </div>
           <div class="md:w-1/3 w-full mt-10 md:pl-10">
-            <h1 class="text-2xl">Follow us:</h1>
+            <h1 class="lg:text-2xl text-xl">Theo dõi thêm tại:</h1>
             <div class="flex">
               <img class="w-10" src="Images/icons8-insta-240.png" alt="" />
               <img class="w-10" src="Images/icons8-facebook-100.png" alt="" />
@@ -1705,6 +1903,8 @@
         </div>
       </div>
     </footer>
+
+    <section id="pay"></section>
 
     <script src="JS/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
