@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "REM", sans-serif;
+  src: url("../font/Ramabhadra-Regular.ttf") format("truetype");
+  src: url("../font/REM-VariableFont_wght.ttf") format("truetype");
+  src: url("../font/REM-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "REM", sans-serif;
+}
+.line {
+  background-color: #895f53;
+  content: "";
+  height: 3px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+/*Header*/
+.cart_btn:hover {
+  background-color: rgb(255, 237, 100);
+  transition: 0.3s;
+  button {
+    background-color: rgb(255, 237, 100);
+    transition: 0.3s;
+  }
+}
+.active_page {
+  background-color: #895f53;
+  content: "";
+  height: 2px;
+  width: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+.underline_page {
+  background-color: #895f53;
+  content: "";
+  height: 2px;
+  width: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+#menu li:hover .underline_page {
+  width: 45px;
+}
+
+.cursor_top {
+  /* display: none; */
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc58f;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.204);
+  color: white;
+  bottom: 5%;
+  right: 5%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .nav-link{
-    @apply md:text-black hover:text-orange-400 transition duration-100 ease-in sm:text-2xl md:text-base;
+    @apply md:text-black hover:text-sub_brand transition duration-100 ease-in sm:text-2xl md:text-base;
 }
 
 .nav-menu{

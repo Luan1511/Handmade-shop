@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,8 +21,9 @@
     />
   </head>
   <body class="bg-orange-50">
+    <!-- Header -->
     <div
-      class="menuLogo md:h-20 h-16 flex justify-center items-center hidden fixed top-0 w-full z-40 pointer-events-none border-b border-gray-300"
+      class="menuLogo md:hidden md:h-20 h-16 flex justify-center items-center hidden fixed top-0 w-full z-40 pointer-events-none border-b border-gray-300"
     >
       <div class="my-auto">
         <div
@@ -32,14 +32,18 @@
           data-aos="fade-right"
           data-aos-delay="200"
         >
-          <img
-            class="md:mx-2 mr-2"
-            src="Images/Logo_2.png"
-            alt="website logo"
-          />
-          <p style="font-family: 'Amatic SC', cursive; font-weight: bold">
-            Handmado
-          </p>
+          <div
+            class="left-0 h-14 flex items-center bg-white px-20 mr-10 mt-1 border-b border-gray-300"
+          >
+            <img
+              class="md:mx-2 mr-2 size-8"
+              src="Images/Logo_2.png"
+              alt="website logo"
+            />
+            <p style="font-family: 'Amatic SC', cursive; font-weight: bold">
+              Handmedo
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -68,7 +72,7 @@
                   font-weight: bold;
                 "
               >
-                Handmado
+                Handmedo
               </p>
             </div>
           </div>
@@ -76,6 +80,8 @@
             <form
               action=""
               class="flex flex-row text-sm border rounded-md h-10 md:w-full"
+              data-aos="fade-down"
+              data-aos-delay="200"
             >
               <!-- <div class="items-center bg-white">
              <ul class="search_type_pro my-auto">
@@ -85,20 +91,24 @@
                <li>Vase</li>
              </ul>
            </div> -->
-              <select name="" id="" class="rounded-l-md w-16 border-none text-xs md:text-sm">
+              <select
+                name=""
+                id=""
+                class="rounded-l-md w-16 border-none text-xs md:text-sm"
+              >
                 <option value="">Tất cả</option>
                 <option value="">Sản phẩm từ gỗ</option>
                 <option value="">Lọ hoa</option>
                 <option value="">Sản phẩm từ giấy</option>
                 <option value="">Dệt may</option>
-                <option value="">Đồ thủy tinh</option>  
+                <option value="">Đồ thủy tinh</option>
               </select>
               <input
                 type="text"
                 name=""
                 id=""
-                class="grow w-2/3"
-                placeholder="Enter to search..."
+                class="grow w-2/3 pl-4"
+                placeholder="Nhập để tìm..."
               />
               <button
                 class="bg-sub_brand text-white rounded-r-md w-10 flex justify-center"
@@ -120,9 +130,14 @@
               </button>
             </form>
           </div>
-          <div class="w-1/4 justify-end flex h-10 md:my-auto">
-            <div
-              class="flex cart_btn cursor-pointer bg-yellow-300 pl-2 rounded-lg shadow-sm"
+          <div
+            class="w-1/4 justify-end flex h-10 md:my-auto"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <a
+              class="cart_btn flex cursor-pointer bg-yellow-300 pl-2 rounded-lg shadow-sm"
+              href="User_order.html"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +158,7 @@
                 type="button"
                 class="bg-yellow-300 h-full float-end text-xs hidden md:block"
               >
-                My cart
+                Giỏ hàng
               </button>
               <span class="flex h-2 w-2 translate-x-1 -translate-y-1">
                 <span
@@ -153,7 +168,30 @@
                   class="relative inline-flex rounded-full h-2 w-2 bg-red-500"
                 ></span>
               </span>
-            </div>
+            </a>
+          </div>
+          <div class="w-10 float-end my-auto translate-x-3 md:translate-x-10">
+            <a
+              class="flex flex-row"
+              href="User.html"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -162,47 +200,54 @@
     <div
       class="navbar fixed drop-shadow-md md:drop-shadow-lg w-full bg-orange-50 z-30"
     >
-      <div class="container mx-auto px-4">
-        <nav class="flex justify-between items-center md:py-4 py-2">
+      <div class="container w-full mx-auto md:px-0 px-4">
+        <nav class="flex justify-between items-center w-full md:py-4 py-2">
           <!--Logo-->
           <a
-            class="logo_container cursor-pointer w-10 md:w-14 z-30 flex justify-center items-center ml-8 p-1 invisible"
+            class="logo_container cursor-pointer w-2/12 z-30 flex justify-center items-center ml-8 md:ml-0 p-1 invisible"
             href="#hero"
             style="font-family: 'Amatic SC', cursive; font-weight: bold"
           >
-            <img class="mx-2" src="Images/Logo_2.png" alt="website logo" />
-            <p class="md:text-base lg:text-xl">Handmado</p>
+            <img
+              class="mx-2 size-8 md:size-12"
+              src="Images/Logo_2.png"
+              alt="website logo"
+            />
+            <p class="md:text-base lg:text-xl">Handmedo</p>
           </a>
           <!--links-->
-          <ul id="menu" class="nav-menu invisible md:visible text-lg z-30">
+          <ul
+            id="menu"
+            class="nav-menu w-8/12 invisible md:visible text-lg z-30 overflow-auto"
+          >
             <li class="md:h-20 h-16 md:hidden"></li>
-            <li class="m-10 md:m-0 md:mx-2 lg:mx-8 mt-14">
-              <a href="index.html" class="nav-link">Home</a>
+            <li class="first_menuItem m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="index.html" class="nav-link">Trang chủ</a>
+              <div class="underline_page"></div>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="#about" class="nav-link">About</a>
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="#about" class="nav-link">Chúng tôi</a>
+              <div class="underline_page"></div>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="#product" class="nav-link" style="white-space: nowrap"
-                >New product</a
-              >
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="Mainproduct.html" class="nav-link">Cửa hàng</a>
+              <div class="active_page"></div>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="Mainproduct.html" class="nav-link">Shop</a>
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="Costume.html" class="nav-link">Đặt thiết kế</a>
+              <div class="underline_page"></div>
             </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8">
-              <a href="" class="nav-link">Design</a>
+            <li class="m-3 md:m-0 md:ml-2 lg:mx-8">
+              <a href="community.html" class="nav-link">Cộng đồng</a>
+              <div class="underline_page"></div>
             </li>
-            <li class="m-6 md:m-0 md:ml-2 lg:mx-8">
-              <a href="" class="nav-link">Contact</a>
-            </li>
-            <li class="m-6 md:m-0 md:mx-2 lg:mx-8 md:hidden">
+            <li class="m-3 md:m-0 md:mx-0 lg:mx-8 md:hidden">
               <div class="justify-center md:flex">
-                <button class="text-sub_brand p-1 px-4">Login</button>
+                <button class="text-sub_brand p-1 px-4">Đăng nhập</button>
                 <button
-                  class="bg-sub_brand rounded-2xl text-white p-1 px-4 w-24"
+                  class="bg-sub_brand rounded-2xl text-white p-1 px-4 w-28"
                 >
-                  Sign up
+                  Đăng ký
                 </button>
               </div>
             </li>
@@ -211,38 +256,14 @@
           <div
             id="menu-btn"
             class="z-50 md:hidden cursor-pointer md:mx-8 sm:mx-6"
-=======
-<nav class="bg-gray-800">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button
-            type="button"
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
           >
-            <span class="absolute -inset-0.5"></span>
-            <span class="sr-only">Open main menu</span>
-            <!--
-                Icon when menu is closed.
-    
-                Menu open: "hidden", Menu closed: "block"
-              -->
             <svg
-              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-<<<<<<< HEAD
               class="w-6 h-6 mt-1"
-=======
-              aria-hidden="true"
-              
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
             >
               <path
                 stroke-linecap="round"
@@ -250,12 +271,13 @@
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
-<<<<<<< HEAD
           </div>
-          <div class="justify-center hidden md:flex">
-            <button class="text-sub_brand p-1 mr-2">Login</button>
+          <div
+            class="justify-end text-base md:text-sm lg:text-base w-2/12 hidden md:flex"
+          >
+            <button class="text-sub_brand p-1 mr-2 w-24">Đăng nhập</button>
             <button class="bg-sub_brand rounded-2xl text-white p-1 w-24">
-              Sign up
+              Đăng ký
             </button>
           </div>
         </nav>
@@ -273,19 +295,25 @@
         <div class="w-full lg:w-3/5 lg:h-full md:mb-6">
           <div
             class="flex mb-2 lg:mb-0 h-1/6 w-full lg:justify-start justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             <div
               class="line_sm md:mr-2 mr-1 md:h-custom_line_md h-custom_line_sm"
             ></div>
             <h5 class="text-center md:text-base text-sm my-auto">
-              From top user
+              Từ người dùng xếp hạng cao
             </h5>
             <div
               class="line_sm md:ml-2 ml-1 md:h-custom_line_md h-custom_line_sm"
             ></div>
           </div>
           <!-- Product slider -->
-          <div class="slider h-5/6 w-full">
+          <div
+            class="slider h-5/6 w-full"
+            data-aos="fade-right"
+            data-aos-delay="250"
+          >
             <div class="list">
               <div class="item">
                 <img src="Images/product.jpg" alt="" />
@@ -304,8 +332,12 @@
               </div>
             </div>
             <div class="buttons">
-              <button id="prev"><</button>
-              <button id="next">></button>
+              <button id="prev">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <button id="next">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
             </div>
             <ul class="dots">
               <li class="active"></li>
@@ -322,6 +354,8 @@
         >
           <div
             class="flex mb-3 lg:mb-0 w-full lg:justify-start lg:h-1/6 justify-center lg:pt-0 pt-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             <div
               class="line_sm mr-2 md:h-custom_line_md h-custom_line_sm"
@@ -331,7 +365,11 @@
               class="line_sm ml-2 md:h-custom_line_md h-custom_line_sm"
             ></div>
           </div>
-          <div class="flex flex-col h-auto lg:h-5/6 lg:space-y-4">
+          <div
+            class="flex flex-col h-auto lg:h-5/6 lg:space-y-4"
+            data-aos="fade-left"
+            data-aos-delay="250"
+          >
             <!--Deal 1-->
             <div
               class="overflow-hidden flex lg:flex-col flex-row items-center h-1/2"
@@ -339,7 +377,7 @@
               <img
                 src="Images/pillow_handmade_1.jpg"
                 alt=""
-                class="w-1/2 h-full lg:w-full shadow-sm"
+                class="deal_img w-3/5 h-full lg:w-full shadow-sm"
               />
               <div
                 class="lg:hidden items-center text-center my-auto bg-white w-full rounded-r-lg pt-4 shadow-sm"
@@ -394,9 +432,7 @@
               <div
                 class="lg:hidden items-center text-center my-auto bg-white w-full rounded-l-lg pt-4 shadow-sm"
               >
-                <p class="text-xs md:text-base font-bold">
-                  Tiêu bản ngài
-                </p>
+                <p class="text-xs md:text-base font-bold">Tiêu bản bươm bướm</p>
                 <h6 class="text-gray-600 text-xs">Luffy</h6>
                 <div
                   class="flex flex-row mx-auto justify-center items-center space-x-2 pt-2"
@@ -439,7 +475,7 @@
               <img
                 src="Images/product_11.jpg"
                 alt=""
-                class="w-1/2 h-full lg:w-full shadow-sm"
+                class="deal_img w-3/5 h-full lg:w-full shadow-sm"
               />
             </div>
           </div>
@@ -450,9 +486,11 @@
     <section class="lg:px-16 sm:px-14 lg:-translate-y-20">
       <div
         class="animate-bounce bg-sub_brand opacity-90 text-white text-sm md:text-xl rounded-lg shadow-md w-4/5 h-16 mx-auto justify-center text-center items-center flex"
+        data-aos="fade-up"
+        data-aos-delay="250"
       >
         <img src="Images/sale_3.png" alt="" class="size-16 md:size-20" />
-        If this is the first you buy from us, you on sale 40%
+        Nếu mua hàng lần đầu ở trang chúng tôi, bạn được giảm giá 40%
       </div>
     </section>
 
@@ -487,108 +525,856 @@
               <div class="under_nav_pro"></div>
             </li>
           </ul>
-        </div>
-        <!-- List product -->
-=======
-            <!--
-                Icon when menu is open.
-    
-                Menu open: "block", Menu closed: "hidden"
-              -->
-            <svg
-              class="hidden h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
+          <!-- List product -->
+          <div
+            class="flex flex-row w-full px-5 pt-5 md:pt-10 justify-around bg-white rounded-r-lg rounded-b-lg pb-10"
+          >
+            <!--Product 1-->
+            <div
+              class="pro_container py-3 md:py-5 w-2/5 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+              data-aos="fade-up"
+              data-aos-delay="150"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
-        <div
-          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
-        >
-          <div class="flex flex-shrink-0 items-center">
-            <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-              alt="Your Company"
-            />
-          </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a
-                href="#"
-                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                aria-current="page"
-                >Dashboard</a
+              <div
+                class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
               >
-              <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Team</a
+                <div class="flex flex-row mx-auto">
+                  Thêm vào giỏ hàng
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
               >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào yêu thích
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
               <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Projects</a
+                data-fancybox="img_product"
+                class="img_product"
+                href="Images/product.jpg"
+                ><img
+                  src="Images/product.jpg"
+                  alt=""
+                  class="img_pro_1 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+              /></a>
+              <h3 class="font-bold mt-2">Trái tim trang trí</h3>
+              <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
+                $5
+              </div>
+              <div
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
               >
+                Cửa hàng: Lena_01
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div
+              class="pro_container py-3 md:py-5 w-2/5 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào giỏ hàng
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào yêu thích
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
               <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Calendar</a
+                data-fancybox="img_product"
+                class="img_product"
+                href="Images/product_2.jpg"
+                ><img
+                  src="Images/product_2.jpg"
+                  alt=""
+                  class="img_pro_2 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5 hover:w-4/5"
+              /></a>
+              <h3 class="font-bold mt-2">Ngôi nhà socola</h3>
+              <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
+                $10
+              </div>
+              <div
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
               >
+                Cửa hàng: Andrew_01
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div
+              class="pro_container py-3 md:py-5 w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex-col shadow-2xl hidden md:flex"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
+              <div
+                class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào giỏ hàng
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào yêu thích
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <a
+                data-fancybox="img_product"
+                class="img_product"
+                href="Images/product_3.jpg"
+                ><img
+                  src="Images/product_3.jpg"
+                  alt=""
+                  class="img_pro_3 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+              /></a>
+              <h3 class="font-bold mt-2">Nón lá với hoa văn</h3>
+              <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
+                $3
+              </div>
+              <div
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              >
+                Cửa hàng: Lena_01
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div
+              class="pro_container py-3 md:py-5 hidden w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg lg:flex flex-col shadow-2xl"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div
+                class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào giỏ hàng
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào yêu thích
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <a
+                data-fancybox="img_product"
+                class="img_product"
+                href="Images/product_5.jpg"
+                ><img
+                  src="Images/product_5.jpg"
+                  alt=""
+                  class="img_pro_4 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+              /></a>
+              <h3 class="font-bold mt-2">Lọ ánh sáng</h3>
+              <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
+                $15
+              </div>
+              <div
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              >
+                Cửa hàng: Marco
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div
+              class="pro_container py-3 md:py-5 hidden md:flex w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex-col shadow-2xl"
+              data-aos="fade-up"
+              data-aos-delay="350"
+            >
+              <div
+                class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào giỏ hàng
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="ml-2 w-4 md:w-6 h-4 md:h-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+              >
+                <div class="flex flex-row mx-auto">
+                  Thêm vào yêu thích
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 md:w-6 h-4 md:h-6 ml-1 mr-2 my-auto"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <a
+                data-fancybox="img_product"
+                class="img_product"
+                href="Images/product_11.jpg"
+                ><img
+                  src="Images/product_11.jpg"
+                  alt=""
+                  class="img_pro_5 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
+              /></a>
+              <h3 class="font-bold">Tiêu bản ngài</h3>
+              <div class="cost_pro bg-gray-200 rounded-xl px-2 w-fit mx-auto">
+                $50
+              </div>
+              <div
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              >
+                Cửa hàng: Mr.Tran
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-        >
-          <button
-            type="button"
-            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-          >
-            <span class="absolute -inset-1.5"></span>
-            <span class="sr-only">View notifications</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-              />
-            </svg>
-          </button>
-
-<<<<<<< HEAD
-    <!--furniture ad-->
-    <section class="w-4/5 mx-auto h-32">
+      </div>
+    </section>
+    <!-- Product Cursor  -->
+    <div
+      class="cursor_pro relative w-full cursor-none text-center text-white bg-sub_brand shadow-lg pointer-events-none"
+      style="will-change: auto"
+    >
       <div
-        class="w-full h-32 text-black items-center text-center justify-center flex rounded-md"
+        class="absolute top-7 left-1 flex flex-row mx-auto space-x-3 -rotate-45"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-7 h-7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-7 h-7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!--furniture ad-->
+    <section id="funiture_pro" class="w-4/5 mx-auto h-fit mb-48">
+      <div
+        class="w-full h-48 text-black items-center text-center justify-center flex rounded-md"
         style="
           background: linear-gradient(#ffffff80, #ffffff6c),
             url(Images/wood-room.jpg);
           background-size: cover;
         "
+        data-aos="fade-up"
+        data-aos-delay="250"
       >
         <div
-          class="p-3 w-1/2 md:w-1/3 text-sub_brand font-bold text-sm lg:text-xl shadow-lg bg-orange-50 rounded-tr-lg rounded-bl-lg bg-opacity-90"
+          class="p-3 w-1/2 md:w-1/3 text-sub_brand font-bold text-sm lg:text-xl shadow-custom bg-orange-50 rounded-lg bg-opacity-90"
         >
-          Awesome collection wood furniture from our best designer
+          Bộ sưu tập đồ nội thất thủ công tuyệt đẹp từ những người thợ lành nghề
+        </div>
+      </div>
+
+      <div
+        class="flex flex-row items-center mt-5"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="line" style="height: 1px"></div>
+        <h1
+          class="text-sm lg:text-base w-fit p-3 pb-1"
+          style="background-color: rgba(255, 255, 255, 0.3)"
+        >
+          Đồ nội thất thủ công
+        </h1>
+      </div>
+
+      <div class="w-full h-fit mb-5">
+        <div class="wrapper w-full mx-auto">
+          <ul class="carousel">
+            <li
+              class="card relative -z-0"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <span class="absolute flex w-20 h-fit top-0 left-0 -z-10">
+                <img
+                  src="Images/sale-label.png"
+                  class="inline-flex size-full rounded-full bg-green-400"
+                  alt=""
+                />
+              </span>
+              <div
+                class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
+              >
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                  Thêm yêu thích
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"
+                    />
+                  </svg>
+                  Xem thông tin
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                    />
+                  </svg>
+                  Thêm vào giỏ
+                </div>
+              </div>
+              <div class="img">
+                <img src="Images/furniture_1.jpg" alt="img" draggable="false" />
+              </div>
+              <h2>Ghế đẩu cao</h2>
+              <div class="flex space-x-2">
+                <div class="text-red-700 line-through pb-2">$300</div>
+                <div class="cost">$225</div>
+              </div>
+              <p>Dr Stone</p>
+            </li>
+            <li
+              class="card relative -z-0"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
+              >
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                  Thêm yêu thích
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"
+                    />
+                  </svg>
+                  Xem thông tin
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                    />
+                  </svg>
+                  Thêm vào giỏ
+                </div>
+              </div>
+              <div class="img">
+                <img src="Images/furniture_2.jpg" alt="img" draggable="false" />
+              </div>
+              <h2>Ghế đọc sách</h2>
+              <div class="cost">$225</div>
+              <p>Dr Stone</p>
+            </li>
+            <li
+              class="card relative -z-0"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
+              <div
+                class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
+              >
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                  Thêm yêu thích
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"
+                    />
+                  </svg>
+                  Xem thông tin
+                </div>
+                <div
+                  class="card_option hover:bg-green-500 hover:text-white invisible"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                    />
+                  </svg>
+                  Thêm vào giỏ
+                </div>
+              </div>
+              <div class="img">
+                <img src="Images/furniture_3.jpg" alt="img" draggable="false" />
+              </div>
+
+              <h2>Bàn gỗ sồi</h2>
+              <div class="cost">$225</div>
+              <p>Dr Nguyen</p>
+            </li>
+            <li
+              class="card relative -z-0"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div
+                class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
+              >
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                  Thêm yêu thích
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"
+                    />
+                  </svg>
+                  Xem thông tin
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                    />
+                  </svg>
+                  Thêm vào giỏ
+                </div>
+              </div>
+              <span class="absolute flex w-20 h-fit top-0 left-0 -z-10">
+                <img
+                  src="Images/sale-label.png"
+                  class="inline-flex size-full rounded-full bg-green-400"
+                  alt=""
+                />
+              </span>
+              <div class="img">
+                <img src="Images/furniture_4.jpg" alt="img" draggable="false" />
+              </div>
+              <h2>Bộ bàn ghế vân sam</h2>
+              <div class="flex space-x-2">
+                <div class="text-red-700 line-through pb-2">$300</div>
+                <div class="cost">$225</div>
+              </div>
+              <p>Dr Stone</p>
+            </li>
+            <li
+              class="card relative -z-0"
+              data-aos="fade-up"
+              data-aos-delay="350"
+            >
+              <div
+                class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
+              >
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                  Thêm yêu thích
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"
+                    />
+                  </svg>
+                  Xem thông tin
+                </div>
+                <div
+                  class="card_option hover:bg-green-500 hover:text-white invisible"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                    />
+                  </svg>
+                  Thêm vào giỏ
+                </div>
+              </div>
+              <div class="img">
+                <img src="Images/furniture_5.jpg" alt="img" draggable="false" />
+              </div>
+
+              <h2>Ghế hoàng gia</h2>
+              <div class="cost">$999</div>
+              <p>Dr Kim</p>
+            </li>
+            <li
+              class="card relative -z-0"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div
+                class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
+              >
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                  Thêm yêu thích
+                </div>
+                <div class="card_option hover:bg-green-500 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"
+                    />
+                  </svg>
+                  Xem thông tin
+                </div>
+                <div
+                  class="card_option hover:bg-green-500 hover:text-white invisible"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                    />
+                  </svg>
+                  Thêm vào giỏ
+                </div>
+              </div>
+              <div class="img">
+                <img src="Images/furniture_6.jpg" alt="img" draggable="false" />
+              </div>
+
+              <h2>Giá để giày</h2>
+              <div class="cost">$225</div>
+              <p>Dr Stone</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -608,339 +1394,60 @@
                 class="lg:text-2xl md:text-lg sm:text-xl"
                 style="font-family: 'Amatic SC', cursive; font-weight: bold"
               >
-                Handmado
+                Handmedo
               </h1>
-=======
-          <!-- Profile dropdown -->
-          <div class="relative ml-3">
+            </div>
+            <p class="text-orange-50">
+              Chúng tôi đến từ 23AI. <br />
+              Đại học Viet-Han.
+            </p>
             <div>
-              <button
-                type="button"
-                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                id="user-menu-button"
-                aria-expanded="false"
-                aria-haspopup="true"
-              >
-                <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">Open user menu</span>
-                <img
-                  class="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                />
-              </button>
+              <span class="text-lg font-bold text-orange-50">Địa chỉ: </span>
+              Trần Đại Nghĩa, Hòa Hải, Ngũ Hành Sơn
             </div>
-
-            <!--
-                Dropdown menu, show/hide based on menu state.
-    
-                Entering: "transition ease-out duration-100"
-                  From: "transform opacity-0 scale-95"
-                  To: "transform opacity-100 scale-100"
-                Leaving: "transition ease-in duration-75"
-                  From: "transform opacity-100 scale-100"
-                  To: "transform opacity-0 scale-95"
-              -->
-            <div
-              class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="user-menu-button"
-              tabindex="-1"
-            >
-              <!-- Active: "bg-gray-100", Not Active: "" -->
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabindex="-1"
-                id="user-menu-item-0"
-                >Your Profile</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabindex="-1"
-                id="user-menu-item-1"
-                >Settings</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabindex="-1"
-                id="user-menu-item-2"
-                >Sign out</a
-              >
+            <div class="text-orange-50">
+              <span class="text-lg font-bold">Điện thoại: </span>
+              <ul class="ml-5">
+                <li>0389 376 692 (Phạm Viết Chí Luân)</li>
+                <li>0913991570 (Nguyễn Hoàng Minh Nguyên)</li>
+                <li>0353009938 (Trần Lý Nghĩa)</li>
+                <li>0914448156 (Lê Đặng Văn Thi)</li> 
+              </ul>
+            </div>
+            <div>
+              <span class="text-lg font-bold text-orange-50">Email:</span>
+              vku.23ai@vku.udn.vn
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pb-3 pt-2">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a
-          href="#"
-          class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-          aria-current="page"
-          >Dashboard</a
-        >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >Team</a
-        >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >Projects</a
-        >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >Calendar</a
-        >
-      </div>
-    </div>
-  </nav>
-
-  <!--
-This example requires some changes to your config:
-
-```
-// tailwind.config.js
-module.exports = {
-  // ...
-  theme: {
-    extend: {
-      gridTemplateRows: {
-        '[auto,auto,1fr]': 'auto auto 1fr',
-      },
-    },
-  },
-  plugins: [
-    // ...
-    require('@tailwindcss/aspect-ratio'),
-  ],
-}
-```
--->
-  <div class="bg-white">
-    <div class="pt-6">
-      <nav aria-label="Breadcrumb">
-        <ol
-          role="list"
-          class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
-        >
-          <li>
-            <div class="flex items-center">
-              <a href="#" class="mr-2 text-sm font-medium text-gray-900"
-                >Men</a
-              >
-              <svg
-                width="16"
-                height="20"
-                viewBox="0 0 16 20"
-                fill="currentColor"
-                aria-hidden="true"
-                class="h-5 w-4 text-gray-300"
-              >
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-              </svg>
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
-            </div>
-          </li>
-          <li>
-            <div class="flex items-center">
-              <a href="#" class="mr-2 text-sm font-medium text-gray-900"
-                >Clothing</a
-              >
-              <svg
-                width="16"
-                height="20"
-                viewBox="0 0 16 20"
-                fill="currentColor"
-                aria-hidden="true"
-                class="h-5 w-4 text-gray-300"
-              >
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-              </svg>
-            </div>
-          </li>
-
-          <li class="text-sm">
-            <a
-              href="#"
-              aria-current="page"
-              class="font-medium text-gray-500 hover:text-gray-600"
-              >Basic Tee 6-Pack</a
-            >
-          </li>
-        </ol>
-      </nav>
-
-      <!-- Image gallery -->
-      <div
-        class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8"
-      >
-        <div
-          class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block"
-        >
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
-            alt="Two each of gray, white, and black shirts laying flat."
-            class="h-full w-full object-cover object-center"
-          />
-        </div>
-        <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-          <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
-              alt="Model wearing plain black basic tee."
-              class="h-full w-full object-cover object-center"
-            />
-          </div>
-          <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
-              alt="Model wearing plain gray basic tee."
-              class="h-full w-full object-cover object-center"
-            />
-          </div>
-        </div>
-        <div
-          class="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg"
-        >
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
-            alt="Model wearing plain white basic tee."
-            class="h-full w-full object-cover object-center"
-          />
-        </div>
-      </div>
-
-      <!-- Product info -->
-      <div
-        class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16"
-      >
-        <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-          <h1
-            class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl"
-          >
-            Basic Tee 6-Pack
-          </h1>
-        </div>
-
-        <!-- Options -->
-        <div class="mt-4 lg:row-span-3 lg:mt-0">
-          <h2 class="sr-only">Product information</h2>
-          <p class="text-3xl tracking-tight text-gray-900">$192</p>
-
-          <!-- Reviews -->
-          <div class="mt-6">
-            <h3 class="sr-only">Reviews</h3>
-            <div class="flex items-center">
-              <div class="flex items-center">
-                <!-- Active: "text-gray-900", Default: "text-gray-200" -->
-                <svg
-                  class="text-gray-900 h-5 w-5 flex-shrink-0"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  class="text-gray-900 h-5 w-5 flex-shrink-0"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  class="text-gray-900 h-5 w-5 flex-shrink-0"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  class="text-gray-900 h-5 w-5 flex-shrink-0"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  class="text-gray-200 h-5 w-5 flex-shrink-0"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </div>
-              <p class="sr-only">4 out of 5 stars</p>
-              <a
-                href="#"
-                class="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
-                >117 reviews</a
-              >
-            </div>
-          </div>
-<<<<<<< HEAD
           <div class="flex flex-col md:flex-row md:w-1/3 justify-around">
             <div class="md:w-1/3 mt-10 h-full">
-              <h1 class="lg:text-2xl text-xl">Products</h1>
-              <ul>
-                <li><a href="" class="cursor-pointer">Chóa</a></li>
-                <li><a href="" class="cursor-pointer">Điệp</a></li>
-                <li><a href="" class="cursor-pointer">Glass</a></li>
-                <li><a href="" class="cursor-pointer">Nature</a></li>
+              <h1 class="lg:text-2xl text-xl">Sản phẩm</h1>
+              <ul class="pl-2 text-orange-50">
+                <li><a href="" class="cursor-pointer">Từ gỗ</a></li>
+                <li><a href="" class="cursor-pointer">Từ giấy</a></li>
+                <li>
+                  <a href="" class="cursor-pointer">Thủy tinh</a>
+                </li>
+                <li>
+                  <a href="" class="cursor-pointer">Thiên nhiên</a>
+                </li>
               </ul>
             </div>
 
             <div class="md:w-1/3 w-full mt-10 h-full">
               <h1 class="lg:text-2xl text-xl">Website</h1>
-              <ul>
-                <li><a href="" class="cursor-pointer">Home</a></li>
-                <li><a href="" class="cursor-pointer">About us</a></li>
-                <li><a href="" class="cursor-pointer">Product</a></li>
-                <li><a href="" class="cursor-pointer">Order</a></li>
-                <li><a href="" class="cursor-pointer">Service</a></li>
+              <ul class="pl-2 text-orange-50">
+                <li><a href="" class="cursor-pointer">Trang chủ</a></li>
+                <li><a href="" class="cursor-pointer">Chúng tôi</a></li>
+                <li><a href="" class="cursor-pointer">Sản phẩm</a></li>
+                <li><a href="" class="cursor-pointer">Đặt hàng</a></li>
+                <li><a href="" class="cursor-pointer">Dịch vụ</a></li>
               </ul>
             </div>
           </div>
           <div class="md:w-1/3 w-full mt-10 md:pl-10">
-            <h1 class="lg:text-2xl text-xl">Follow us:</h1>
-            <div class="flex">
+            <h1 class="lg:text-2xl text-xl">Theo dõi thêm tại:</h1>
+            <div class="flex text-orange-50">
               <img class="w-10" src="Images/icons8-insta-240.png" alt="" />
               <img class="w-10" src="Images/icons8-facebook-100.png" alt="" />
               <img
@@ -953,352 +1460,59 @@ module.exports = {
                 src="Images/icons8-github-100.png"
                 alt=""
               />
-=======
-
-          <form class="mt-10">
-            <!-- Colors -->
-            <div>
-              <h3 class="text-sm font-medium text-gray-900">Color</h3>
-
-              <fieldset class="mt-4">
-                <legend class="sr-only">Choose a color</legend>
-                <div class="flex items-center space-x-3">
-                  <!--
-                  Active and Checked: "ring ring-offset-1"
-                  Not Active and Checked: "ring-2"
-                -->
-                  <label
-                    class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-400"
-                  >
-                    <input
-                      type="radio"
-                      name="color-choice"
-                      value="White"
-                      class="sr-only"
-                      aria-labelledby="color-choice-0-label"
-                    />
-                    <span id="color-choice-0-label" class="sr-only"
-                      >White</span
-                    >
-                    <span
-                      aria-hidden="true"
-                      class="h-8 w-8 bg-white rounded-full border border-black border-opacity-10"
-                    ></span>
-                  </label>
-                  <!--
-                  Active and Checked: "ring ring-offset-1"
-                  Not Active and Checked: "ring-2"
-                -->
-                  <label
-                    class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-400"
-                  >
-                    <input
-                      type="radio"
-                      name="color-choice"
-                      value="Gray"
-                      class="sr-only"
-                      aria-labelledby="color-choice-1-label"
-                    />
-                    <span id="color-choice-1-label" class="sr-only"
-                      >Gray</span
-                    >
-                    <span
-                      aria-hidden="true"
-                      class="h-8 w-8 bg-gray-200 rounded-full border border-black border-opacity-10"
-                    ></span>
-                  </label>
-                  <!--
-                  Active and Checked: "ring ring-offset-1"
-                  Not Active and Checked: "ring-2"
-                -->
-                  <label
-                    class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-900"
-                  >
-                    <input
-                      type="radio"
-                      name="color-choice"
-                      value="Black"
-                      class="sr-only"
-                      aria-labelledby="color-choice-2-label"
-                    />
-                    <span id="color-choice-2-label" class="sr-only"
-                      >Black</span
-                    >
-                    <span
-                      aria-hidden="true"
-                      class="h-8 w-8 bg-gray-900 rounded-full border border-black border-opacity-10"
-                    ></span>
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-
-            <!-- Sizes -->
-            <div class="mt-10">
-              <div class="flex items-center justify-between">
-                <h3 class="text-sm font-medium text-gray-900">Size</h3>
-                <a
-                  href="#"
-                  class="text-sm font-medium text-indigo-600 hover:text-indigo-500"
-                  >Size guide</a
-                >
-              </div>
-
-              <fieldset class="mt-4">
-                <legend class="sr-only">Choose a size</legend>
-                <div
-                  class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4"
-                >
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-not-allowed bg-gray-50 text-gray-200"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="XXS"
-                      disabled
-                      class="sr-only"
-                      aria-labelledby="size-choice-0-label"
-                    />
-                    <span id="size-choice-0-label">XXS</span>
-                    <span
-                      aria-hidden="true"
-                      class="pointer-events-none absolute -inset-px rounded-md border-2 border-gray-200"
-                    >
-                      <svg
-                        class="absolute inset-0 h-full w-full stroke-2 text-gray-200"
-                        viewBox="0 0 100 100"
-                        preserveAspectRatio="none"
-                        stroke="currentColor"
-                      >
-                        <line
-                          x1="0"
-                          y1="100"
-                          x2="100"
-                          y2="0"
-                          vector-effect="non-scaling-stroke"
-                        />
-                      </svg>
-                    </span>
-                  </label>
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="XS"
-                      class="sr-only"
-                      aria-labelledby="size-choice-1-label"
-                    />
-                    <span id="size-choice-1-label">XS</span>
-                    <!--
-                    Active: "border", Not Active: "border-2"
-                    Checked: "border-indigo-500", Not Checked: "border-transparent"
-                  -->
-                    <span
-                      class="pointer-events-none absolute -inset-px rounded-md"
-                      aria-hidden="true"
-                    ></span>
-                  </label>
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="S"
-                      class="sr-only"
-                      aria-labelledby="size-choice-2-label"
-                    />
-                    <span id="size-choice-2-label">S</span>
-                    <!--
-                    Active: "border", Not Active: "border-2"
-                    Checked: "border-indigo-500", Not Checked: "border-transparent"
-                  -->
-                    <span
-                      class="pointer-events-none absolute -inset-px rounded-md"
-                      aria-hidden="true"
-                    ></span>
-                  </label>
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="M"
-                      class="sr-only"
-                      aria-labelledby="size-choice-3-label"
-                    />
-                    <span id="size-choice-3-label">M</span>
-                    <!--
-                    Active: "border", Not Active: "border-2"
-                    Checked: "border-indigo-500", Not Checked: "border-transparent"
-                  -->
-                    <span
-                      class="pointer-events-none absolute -inset-px rounded-md"
-                      aria-hidden="true"
-                    ></span>
-                  </label>
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="L"
-                      class="sr-only"
-                      aria-labelledby="size-choice-4-label"
-                    />
-                    <span id="size-choice-4-label">L</span>
-                    <!--
-                    Active: "border", Not Active: "border-2"
-                    Checked: "border-indigo-500", Not Checked: "border-transparent"
-                  -->
-                    <span
-                      class="pointer-events-none absolute -inset-px rounded-md"
-                      aria-hidden="true"
-                    ></span>
-                  </label>
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="XL"
-                      class="sr-only"
-                      aria-labelledby="size-choice-5-label"
-                    />
-                    <span id="size-choice-5-label">XL</span>
-                    <!--
-                    Active: "border", Not Active: "border-2"
-                    Checked: "border-indigo-500", Not Checked: "border-transparent"
-                  -->
-                    <span
-                      class="pointer-events-none absolute -inset-px rounded-md"
-                      aria-hidden="true"
-                    ></span>
-                  </label>
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="2XL"
-                      class="sr-only"
-                      aria-labelledby="size-choice-6-label"
-                    />
-                    <span id="size-choice-6-label">2XL</span>
-                    <!--
-                    Active: "border", Not Active: "border-2"
-                    Checked: "border-indigo-500", Not Checked: "border-transparent"
-                  -->
-                    <span
-                      class="pointer-events-none absolute -inset-px rounded-md"
-                      aria-hidden="true"
-                    ></span>
-                  </label>
-                  <!-- Active: "ring-2 ring-indigo-500" -->
-                  <label
-                    class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm"
-                  >
-                    <input
-                      type="radio"
-                      name="size-choice"
-                      value="3XL"
-                      class="sr-only"
-                      aria-labelledby="size-choice-7-label"
-                    />
-                    <span id="size-choice-7-label">3XL</span>
-                    <!--
-                    Active: "border", Not Active: "border-2"
-                    Checked: "border-indigo-500", Not Checked: "border-transparent"
-                  -->
-                    <span
-                      class="pointer-events-none absolute -inset-px rounded-md"
-                      aria-hidden="true"
-                    ></span>
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-
-            <button
-              type="submit"
-              class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-              Add to bag
-            </button>
-          </form>
-        </div>
-
-        <div
-          class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6"
-        >
-          <!-- Description and details -->
-          <div>
-            <h3 class="sr-only">Description</h3>
-
-            <div class="space-y-6">
-              <p class="text-base text-gray-900">
-                The Basic Tee 6-Pack allows you to fully express your vibrant
-                personality with three grayscale options. Feeling adventurous?
-                Put on a heather gray tee. Want to be a trendsetter? Try our
-                exclusive colorway: &quot;Black&quot;. Need to add an extra
-                pop of color to your outfit? Our white tee has you covered.
-              </p>
-            </div>
-          </div>
-
-          <div class="mt-10">
-            <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-
-            <div class="mt-4">
-              <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-                <li class="text-gray-400">
-                  <span class="text-gray-600">Hand cut and sewn locally</span>
-                </li>
-                <li class="text-gray-400">
-                  <span class="text-gray-600"
-                    >Dyed with our proprietary colors</span
-                  >
-                </li>
-                <li class="text-gray-400">
-                  <span class="text-gray-600"
-                    >Pre-washed &amp; pre-shrunk</span
-                  >
-                </li>
-                <li class="text-gray-400">
-                  <span class="text-gray-600">Ultra-soft 100% cotton</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="mt-10">
-            <h2 class="text-sm font-medium text-gray-900">Details</h2>
-
-            <div class="mt-4 space-y-6">
-              <p class="text-sm text-gray-600">
-                The 6-Pack includes two black, two white, and two heather gray
-                Basic Tees. Sign up for our subscription service and be the
-                first to get new, exciting colors, like our upcoming
-                &quot;Charcoal Gray&quot; limited release.
-              </p>
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </footer>
+
+    <a href="#">
+      <div class="cursor_top cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+          />
+        </svg>
+      </div>
+    </a>
+
+    <section id="pay" class="w-full">
+      <div
+        class="rounded-t-3xl bg-sub_brand h-10 w-full flex justify-center items-center"
+      >
+        <p class="mx-auto text-white">Copyright by TLN&copy</p>
+      </div>
+    </section>
+
+    <script src="JS/product.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9cc9a7acc2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox]", {});
+
+      Fancybox.bind('[data-fancybox="gallery-a"]', {});
+
+      Fancybox.bind('[data-fancybox="gallery-b"]', {
+        Carousel: {
+          infinite: false,
+        },
+      });
+    </script>
+  </body>
+</html>

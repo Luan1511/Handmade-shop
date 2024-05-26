@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/user-order.css" />
+    <link rel="shortcut icon" href="Images/Logo_2.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <script>
+      function toggleMenu(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const subMenu = document.getElementById("subMenu");
+        subMenu.classList.toggle("hidden");
+      }
+    </script>
+  </head>
+
+  <body class="bg-orange-50">
+    <!-- Header -->
+    <div
+      class="menuLogo md:hidden md:h-20 h-16 flex justify-center items-center hidden fixed top-0 w-full z-40 pointer-events-none border-b border-gray-300"
+    >
+      <div class="my-auto">
+        <div
+          class="cursor-pointer text-black w-10 md:w-14 flex justify-center items-center mx-3 p-1 font-bold"
+          href="#hero"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <div
+            class="left-0 h-14 flex items-center bg-white px-20 mr-10 mt-1 border-b border-gray-300"
+          >
+            <img
+              class="md:mx-2 mr-2 size-8"
+              src="Images/Logo_2.png"
+              alt="website logo"
+            />
+            <p style="font-family: 'Amatic SC', cursive; font-weight: bold">
+              Handmedo
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header
+      class="header w-full bg-orange-50 z-20 border-b border-white drop-shadow-md"
+    >
+      <div class="h-16 md:h-20 backdrop-opacity-50 w-full md:w-4/5 p-3 mx-auto">
+        <div class="flex flex-row w-full justify-center my-auto">
+          <div class="w-1/4">
+            <div
+              class="cursor-pointer w-10 md:w-14 z-20 flex justify-center items-center mx-3 p-1 font-bold"
+              href="#hero"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <img
+                class="md:mx-2 mr-8"
+                src="Images/Logo_2.png"
+                alt="website logo"
+              />
+              <p
+                class="hidden md:block text-2xl"
+                style="
+                  font-family: 'Amatic SC', cursive !important;
+                  font-weight: bold;
+                "
+              >
+                Handmedo
+              </p>
+            </div>
+          </div>
+          <div class="w-2/4 flex justify-center md:my-auto">
+            <form
+              action=""
+              class="flex flex-row text-sm border rounded-md h-10 md:w-full"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <!-- <div class="items-center bg-white">
+             <ul class="search_type_pro my-auto">
+               Type |
+               <li>All</li>
+               <li>Wood product</li>
+               <li>Vase</li>
+             </ul>
+           </div> -->
+              <select
+                name=""
+                id=""
+                class="rounded-l-md w-16 border-none text-xs md:text-sm"
+              >
+                <option value="">Tất cả</option>
+                <option value="">Sản phẩm từ gỗ</option>
+                <option value="">Lọ hoa</option>
+                <option value="">Sản phẩm từ giấy</option>
+                <option value="">Dệt may</option>
+                <option value="">Đồ thủy tinh</option>
+              </select>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="grow w-2/3 pl-4"
+                placeholder="Nhập để tìm..."
+              />
+              <button
+                class="bg-sub_brand text-white rounded-r-md w-10 flex justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 my-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div
+            class="w-1/4 justify-end flex h-10 md:my-auto"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <div
+              class="cart_btn flex cursor-pointer bg-yellow-300 pl-2 rounded-lg shadow-sm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 my-auto"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                />
+              </svg>
+              <div class="my-auto mx-2 hidden md:block">|</div>
+              <button
+                type="button"
+                class="bg-yellow-300 h-full float-end text-xs hidden md:block"
+              >
+                Giỏ hàng
+              </button>
+              <span class="flex h-2 w-2 translate-x-1 -translate-y-1">
+                <span
+                  class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-500 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-red-500"
+                ></span>
+              </span>
+            </div>
+          </div>
+          <div class="w-10 float-end my-auto translate-x-3 md:translate-x-10">
+            <a class="flex flex-row" href="User.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              <!-- <p class="md:block hidden text-sm whitespace-nowrap my-auto">Tài khoản</p> -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar  -->
+    <div
+      class="navbar fixed drop-shadow-md md:drop-shadow-lg w-screen bg-orange-50 z-30"
+    >
+      <div class="container w-full mx-auto md:px-0 px-4">
+        <nav class="flex justify-between items-center w-full md:py-4 py-2">
+          <!--Logo-->
+          <a
+            class="logo_container cursor-pointer w-2/12 z-30 flex justify-center items-center ml-8 md:ml-0 p-1 invisible"
+            href="#hero"
+            style="font-family: 'Amatic SC', cursive; font-weight: bold"
+          >
+            <img
+              class="mx-2 size-8 md:size-12"
+              src="Images/Logo_2.png"
+              alt="website logo"
+            />
+            <p class="md:text-base lg:text-xl">Handmedo</p>
+          </a>
+          <!--links-->
+          <ul
+            id="menu"
+            class="nav-menu w-8/12 invisible md:visible text-lg z-30 overflow-auto"
+          >
+            <li class="md:h-20 h-16 md:hidden"></li>
+            <li class="first_menuItem m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="index.html" class="nav-link">Trang chủ</a>
+              <div class="active_page"></div>
+            </li>
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="#about" class="nav-link">Chúng tôi</a>
+              <div class="underline_page"></div>
+            </li>
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="Mainproduct.html" class="nav-link">Cửa hàng</a>
+              <div class="underline_page"></div>
+            </li>
+            <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
+              <a href="" class="nav-link">Đặt thiết kế</a>
+              <div class="underline_page"></div>
+            </li>
+            <li class="m-3 md:m-0 md:ml-2 lg:mx-8">
+              <a href="" class="nav-link">Cộng đồng</a>
+              <div class="underline_page"></div>
+            </li>
+            <li class="m-3 md:m-0 md:mx-0 lg:mx-8 md:hidden">
+              <div class="justify-center md:flex">
+                <button class="text-sub_brand p-1 px-4">Đăng nhập</button>
+                <button
+                  class="bg-sub_brand rounded-2xl text-white p-1 px-4 w-28"
+                >
+                  Đăng ký
+                </button>
+              </div>
+            </li>
+          </ul>
+          <!--Menu button-->
+          <div
+            id="menu-btn"
+            class="z-50 md:hidden cursor-pointer md:mx-8 sm:mx-6"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 mt-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="justify-end text-base md:text-sm lg:text-base w-2/12 hidden md:flex"
+          >
+            <button class="text-sub_brand p-1 mr-2 w-24">Đăng nhập</button>
+            <button class="bg-sub_brand rounded-2xl text-white p-1 w-24">
+              Đăng ký
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ADS -->
+    <section id="ads" style="padding-top: 7rem">
+      <div class="container text-center">
+        <a href="">
+          <strong>Miễn phí đổi ý & trả hàng 30 ngày</strong>
+        </a>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section id="main-body" class="pt-5">
+      <div
+        class="container mx-auto flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5"
+      >
+        <div
+          class="flex flex-col w-full md:w-1/3 lg:w-1/4 bg-gray-100"
+          style="padding-left: 5rem"
+        >
+          <div class="flex items-center px-4 py-2 bg-gray-100">
+            <div class="font-bold">nguyennhm3024</div>
+          </div>
+          <div class="flex flex-col bg-white divide-y divide-gray-200">
+            <!-- <div id="accountMenu" class="space-y-2">
+                        <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100" onclick="toggleMenu(event)">
+                            <span class="mr-2 text-gray-500">👤</span>
+                            <span>Tài Khoản Của Tôi</span>
+                        </a>
+                        <div id="subMenu" class="pl-8 hidden">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Hồ Sơ</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Ngân Hàng</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Địa Chỉ</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Đổi Mật Khẩu</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cài Đặt Thông Báo</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Những Thiết Lập Riêng Tư</a>
+                        </div>
+                    </div> -->
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+              <span class="mr-2 text-gray-500">👤</span>
+              <span>Tài Khoản Của Tôi</span>
+            </a>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+              <span class="mr-2 text-gray-500">📝</span>
+              <span>Đơn Mua</span>
+            </a>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+              <span class="mr-2 text-gray-500">📢</span>
+              <span>Thông Báo</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full md:w-2/3 lg:w-3/4" id="purchase-order">
+          <div class="bg-white p-4">
+            <div class="flex items-center mb-4">
+              <a
+                href="#"
+                class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                id="tat-ca-don"
+                >Tất cả đơn</a
+              >
+              <a
+                href="#"
+                class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                id="cho-thanh-toan"
+                >Chờ thanh toán</a
+              >
+              <a
+                href="#"
+                class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                id="dang-xu-ly"
+                >Đang xử lý</a
+              >
+              <a
+                href="#"
+                class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                id="dang-van-chuyen"
+                >Đang vận chuyển</a
+              >
+              <a
+                href="#"
+                class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                id="da-giao"
+                >Đã giao</a
+              >
+              <a
+                href="#"
+                class="mr-4 text-gray-600 hover:text-gray-800 focus:text-gray-800"
+                id="da-huy"
+                >Đã hủy</a
+              >
+            </div>
+            <div class="flex items-center mb-4">
+              <input
+                type="text"
+                placeholder="Tìm đơn hàng theo Mã đơn hàng, Nhà bán hoặc Tên sản phẩm"
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sub_brand"
+              />
+              <button
+                class="ml-2 px-4 py-2 bg-sub_brand text-white rounded-md hover:bg-sub_brand"
+              >
+                Tìm đơn hàng
+              </button>
+            </div>
+
+            <!-- No purchase order -->
+            <div
+              class="flex justify-center items-center"
+              id="no-orders-container"
+            >
+              <div class="text-center">
+                <img
+                  src="/public/Images/No-order.png"
+                  alt="Order Image"
+                  class="mx-auto mb-4"
+                />
+                <p class="text-gray-600">Chưa có đơn hàng</p>
+              </div>
+            </div>
+
+            <!-- Purchase order -->
+            <div class="" id="orders-container">
+              <section class="bg-white rounded-md shadow-md">
+                <div class="flex items-center mb-4">
+                  <div class="flex items-center text-green-600">
+                    <span class="mr-2">🛒</span>
+                    <span>Giao thứ 2, trước 19h, 27/05</span>
+                  </div>
+                  <div class="flex items-center text-gray-500 ml-4">
+                    <span class="mr-2">⏳</span>
+                    <span>Chờ xác nhận</span>
+                    <span class="ml-2">20:18, Thứ Năm 23/05/2024</span>
+                  </div>
+                </div>
+                <div class="flex">
+                  <img
+                    src="Images/product_11.jpg"
+                    style="width: 50px; height: 70px"
+                    alt="Book Image"
+                    class="w-16 h-20 mr-4"
+                  />
+                  <div class="flex-1">
+                    <p class="font-semibold text-lg">Tiêu bản bươm bướm</p>
+                    <p class="text-gray-500">Mr.Tran</p>
+                    <p class="text-yellow-500 mt-2">ĐỔI TRẢ 30 NGÀY</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-semibold text-lg">$50</p>
+                  </div>
+                </div>
+                <div class="flex justify-end items-center mt-4">
+                  <p class="font-semibold mr-4">Tổng tiền: $50</p>
+                  <button
+                    class="px-4 py-2 bg-white text-sub_brand rounded-md hover:bg-sub_brand"
+                  >
+                    Xem chi tiết
+                  </button>
+                  <button
+                    class="px-4 py-2 bg-white text-sub_brand rounded-md hover:bg-sub_brand ml-2"
+                  >
+                    Theo dõi đơn
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="p-16 pb-10">
+      <div class="rounded-xl bg-sub_brand text-white md:p-6 p-2">
+        <div class="flex md:flex-row flex-col ml-7 justify-center">
+          <div class="md:w-1/3 w-full md:ml-5">
+            <div class="flex flex-row items-center mb-3">
+              <img
+                src="Images/Logo_2.png"
+                alt=""
+                class="lg:w-20 w-14 lg:mr-5 mr-3"
+              />
+              <h1
+                class="lg:text-2xl md:text-lg sm:text-xl"
+                style="font-family: 'Amatic SC', cursive; font-weight: bold"
+              >
+                Handmedo
+              </h1>
+            </div>
+            <p class="text-orange-50">
+              Chúng tôi đến từ 23AI. <br />
+              Đại học Viet-Han.
+            </p>
+            <div>
+              <span class="text-lg font-bold text-orange-50">Địa chỉ: </span>
+              Trần Đại Nghĩa, Hòa Hải, Ngũ Hành Sơn
+            </div>
+            <div class="text-orange-50">
+              <span class="text-lg font-bold">Điện thoại: </span>
+              <ul class="ml-5">
+                <li>0389 376 692 (Phạm Viết Chí Luân)</li>
+                <li>0913991570 (Nguyễn Hoàng Minh Nguyên)</li>
+                <li>0353009938 (Trần Lý Nghĩa)</li>
+              </ul>
+            </div>
+            <div>
+              <span class="text-lg font-bold text-orange-50">Email:</span>
+              vku.23ai@vku.udn.vn
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row md:w-1/3 justify-around">
+            <div class="md:w-1/3 mt-10 h-full">
+              <h1 class="lg:text-2xl text-xl">Sản phẩm</h1>
+              <ul class="pl-2 text-orange-50">
+                <li><a href="" class="cursor-pointer">Từ gỗ</a></li>
+                <li><a href="" class="cursor-pointer">Từ giấy</a></li>
+                <li>
+                  <a href="" class="cursor-pointer">Thủy tinh</a>
+                </li>
+                <li>
+                  <a href="" class="cursor-pointer">Thiên nhiên</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="md:w-1/3 w-full mt-10 h-full">
+              <h1 class="lg:text-2xl text-xl">Website</h1>
+              <ul class="pl-2 text-orange-50">
+                <li><a href="" class="cursor-pointer">Trang chủ</a></li>
+                <li><a href="" class="cursor-pointer">Chúng tôi</a></li>
+                <li><a href="" class="cursor-pointer">Sản phẩm</a></li>
+                <li><a href="" class="cursor-pointer">Đặt hàng</a></li>
+                <li><a href="" class="cursor-pointer">Dịch vụ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:w-1/3 w-full mt-10 md:pl-10">
+            <h1 class="lg:text-2xl text-xl">Theo dõi thêm tại:</h1>
+            <div class="flex text-orange-50">
+              <img class="w-10" src="Images/icons8-insta-240.png" alt="" />
+              <img class="w-10" src="Images/icons8-facebook-100.png" alt="" />
+              <img
+                class="w-9 h-9 my-auto mr-1"
+                src="Images/icons8-twitterx-250.png"
+                alt=""
+              />
+              <img
+                class="w-8 h-8 my-auto rounded-md"
+                src="Images/icons8-github-100.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <section id="pay" class="w-full">
+      <div
+        class="rounded-t-3xl bg-sub_brand h-10 w-full flex justify-center items-center"
+      >
+        <p class="mx-auto text-white">Copyright by TLN&copy</p>
+      </div>
+    </section>
+
+    <script src="JS/user_order.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9cc9a7acc2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox]", {});
+
+      Fancybox.bind('[data-fancybox="gallery-a"]', {});
+
+      Fancybox.bind('[data-fancybox="gallery-b"]', {
+        Carousel: {
+          infinite: false,
+        },
+      });
+    </script>
+  </body>
+</html>

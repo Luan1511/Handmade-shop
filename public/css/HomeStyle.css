@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "REM", sans-serif;
   src: url("../font/Ramabhadra-Regular.ttf") format("truetype");
@@ -7,13 +6,10 @@
   src: url("../font/REM-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
-=======
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
 body {
   font-family: "REM", sans-serif;
 }
 
-<<<<<<< HEAD
 /* Header  */
 header {
   font-weight: 500;
@@ -26,8 +22,27 @@ header {
     transition: 0.3s;
   }
 }
-.navbar {
-  transition: 1s;
+.active_page {
+  background-color: #895f53;
+  content: "";
+  height: 2px;
+  width: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+.underline_page {
+  background-color: #895f53;
+  content: "";
+  height: 2px;
+  width: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+#menu li:hover .underline_page {
+  width: 45px;
 }
 .search_type_pro {
   display: block;
@@ -43,11 +58,6 @@ header {
     margin-top: 200px;
   }
 }
-=======
-header {
-  font-weight: 500;
-}
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
 
 /* Hero  */
 .vertical_line {
@@ -102,6 +112,14 @@ header {
 }
 
 /* About */
+#about img {
+  transition: 0.9s;
+}
+#about img:hover {
+  scale: 1.02;
+  transition: 0.5s;
+  box-shadow: 4px 5px 15px rgba(29, 29, 29, 0.786);
+}
 .second_img {
   display: none;
 }
@@ -127,6 +145,142 @@ header {
 }
 
 /* Top user  */
+.wrapper {
+  max-width: 1100px;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child {
+  left: -22px;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img {
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.carousel .card:hover {
+  .img {
+    scale: 1.1;
+  }
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 0px 0 5px;
+}
+.carousel .card p {
+  color: #70786a;
+  font-size: 0.8rem;
+}
+.option_contain{
+  position: absolute;
+  
+}
+.carousel .card:hover {
+  .card_option{
+    display: flex; 
+    flex-direction: column;
+    box-shadow: -5px 3px 10px 5px rgba(0, 0, 0, 0.138);
+  }
+  background-color: lightgray;
+}
+.card_option {
+  width: 30%;
+  height: 100px;
+  text-align: center;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: rgb(53, 53, 53);
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 3) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+@media screen and (max-width: 520px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
 #maker {
   position: relative;
 }
@@ -155,6 +309,7 @@ header {
 }
 #maker .buttons {
   position: absolute;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
   top: 53%;
   width: 100%;
   display: flex;
@@ -162,7 +317,6 @@ header {
 }
 #maker .buttons button {
   color: white;
-  -webkit-text-stroke: 2px black;
   border: none;
   font-family: monospace;
   font-weight: bold !important;
@@ -249,7 +403,6 @@ header {
   img {
     transition: 0.4s;
   }
-<<<<<<< HEAD
   h3 {
     cursor: default;
   }
@@ -259,8 +412,6 @@ header {
   .maker {
     cursor: default;
   }
-=======
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
 }
 
 .pro_container:hover img {
@@ -270,13 +421,10 @@ header {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 .pro_container img:hover {
   scale: 1.2;
 }
 
-=======
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
 @media screen and (min-width: 768px) {
   .pro_container:hover img {
     transform: translate(0, -100px);
@@ -287,12 +435,7 @@ header {
   transform: translate(0, 90px);
   transition: 0.6s;
   box-shadow: 0px 3px 5px rgba(29, 29, 29, 0.786);
-<<<<<<< HEAD
   background-color: rgb(255, 255, 94) !important;
-=======
-  background-color: rgb(255, 255, 94)!important;
-  cursor: pointer;
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
 }
 
 .option_1 {
@@ -305,17 +448,63 @@ header {
 
 .pro_container:hover .option_2 {
   visibility: visible;
-<<<<<<< HEAD
 }
 
 .cursor_pro {
   display: none;
   position: fixed;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-=======
+
+/* Service */
+#service .service_contain {
+  transition: 0.5s;
+  .iconBox {
+    transition: 0.5s;
+  }
+  p {
+    transition: 0.5s;
+  }
 }
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
+.service_contain:hover {
+  background-color: #895f53;
+  transition: 0.5s;
+  .iconBox {
+    background-color: white;
+    i {
+      color: #895f53;
+    }
+  }
+  p {
+    color: white;
+  }
+}
+
+/* End page */
+#greeting .img_exp img{
+  transition: 0.7s;
+}
+.img_exp:hover img{
+  scale: 1.05;
+  transition: 0.5s;
+}
+
+
+.cursor_top {
+  /* display: none; */
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFC58F;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.204);
+  color: white;
+  bottom: 5%;
+  right: 5%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}

@@ -8,12 +8,9 @@ module.exports = {
         custom_sm_hero: "560px",
         custom_lg_hero: "93vh",
         custom_hero: "620px",
-<<<<<<< HEAD
         custom_10o11: "93%",
         custom_line_md: '2px',
         custom_line_sm: '1px'
-=======
->>>>>>> c741525402fd6f3cdf26f7ca92b89067045faa5d
       },
       width:{
         custom_420px: "420px",
