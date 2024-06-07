@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "REM", sans-serif;
   src: url("../font/Ramabhadra-Regular.ttf") format("truetype");
@@ -6,7 +6,7 @@
   src: url("../font/REM-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
-:root{
+:root {
   --t-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -31,10 +31,10 @@ body {
 }
 
 /*Header*/
-.cart_btn:hover{
+.cart_btn:hover {
   background-color: rgb(255, 237, 100);
   transition: 0.3s;
-  button{
+  button {
     background-color: rgb(255, 237, 100);
     transition: 0.3s;
   }
@@ -128,12 +128,20 @@ body {
 .slider .dots li.active {
   width: 30px;
 }
-.deal_img{
+.deal_img {
   transition: 0.5s;
 }
 @media screen and (max-width: 430px) {
-  .deal_img{
+  .deal_img {
     width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .deal_1_container:hover .deal_1 {
+    visibility: visible !important;
+  }
+  #hero .deal_2_container:hover .deal_2 {
+    visibility: visible !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -157,25 +165,24 @@ body {
     height: 30px;
     font-size: 20px;
   }
-  
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .slider {
-      height: 200px;
-    }
-    .slider .list img {
-      width: 70vw;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
-    .slider .dots li {
-      width: 5px;
-      height: 5px;
-      margin: 5px;
-      border-radius: 10px;
-    }
+  .slider {
+    height: 200px;
   }
+  .slider .list img {
+    width: 70vw;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .slider .dots li {
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+}
 #hero img,
 .slider {
   border-radius: 10px;
@@ -299,6 +306,9 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+.wrapper_doll .carousel_doll {
+  grid-auto-columns: calc((100% / 4) - 12px);
+}
 .carousel::-webkit-scrollbar {
   display: none;
 }
@@ -329,8 +339,19 @@ body {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+.carousel_doll .card {
+  height: 272px !important;
+  .img {
+    height: 152px !important;
+    width: 152px !important;
+    img {
+      height: 152px !important;
+      width: 152px !important;
+    }
+  }
+}
 .carousel .card .img {
-  height: 182px;  
+  height: 182px;
   width: 182px;
   border-radius: 10px;
   transition: 0.5s;
@@ -357,13 +378,12 @@ body {
   color: #70786a;
   font-size: 0.8rem;
 }
-.option_contain{
+.option_contain {
   position: absolute;
-  
 }
 .carousel .card:hover {
-  .card_option{
-    display: flex; 
+  .card_option {
+    display: flex;
     flex-direction: column;
     box-shadow: -5px 3px 10px 5px rgba(0, 0, 0, 0.138);
   }
@@ -380,26 +400,41 @@ body {
   border-radius: 10px;
   color: rgb(53, 53, 53);
 }
-#funiture_pro .card{
+#funiture_pro .card {
   box-shadow: var(--t-box-shadow);
 }
-.wrapper .card .cost{
+.wrapper .card .cost {
   color: rgb(228, 200, 18);
 }
-.wrapper .card h2{
+.wrapper .card h2 {
   text-align: center;
   font-size: large;
+}
+
+@media screen and (max-width: 1160px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 4) - 9px);
+  }
+  .wrapper_doll .carousel_doll {
+    grid-auto-columns: calc((100% / 3) - 9px);
+  }
 }
 
 @media screen and (max-width: 900px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 3) - 9px);
   }
+  .wrapper_doll .carousel_doll {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
 }
 
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
+  }
+  .wrapper_doll .carousel_doll {
+    grid-auto-columns: calc((100% / 1) - 9px);
   }
 }
 @media screen and (max-width: 520px) {
@@ -408,14 +443,13 @@ body {
   }
 }
 
-
 .cursor_top {
   /* display: none; */
   position: fixed;
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: #FFC58F;
+  background-color: #ffc58f;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.204);
   color: white;
   bottom: 5%;
@@ -423,4 +457,16 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+}
+
+.vertical_line {
+  /* width: 10px; */
+  height: 140px;
+  background: #895f53;
+}
+
+.bubble {
+  /* width: 10px; */
+  /* height: 140px; */
+  background: #895f53;
 }
