@@ -77,7 +77,7 @@ header {
 /*Member*/
 .container {
   position: relative;
-  width: fit-content!important;
+  width: fit-content;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

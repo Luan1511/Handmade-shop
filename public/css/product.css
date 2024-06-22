@@ -308,6 +308,9 @@ body {
 }
 .wrapper_doll .carousel_doll {
   grid-auto-columns: calc((100% / 4) - 12px);
+  .card{
+    background-color: #e9e9e9;
+  }
 }
 .carousel::-webkit-scrollbar {
   display: none;
@@ -340,16 +343,125 @@ body {
   margin-bottom: 10px;
 }
 .carousel_doll .card {
-  height: 272px !important;
+  height: 272px;
   .img {
-    height: 152px !important;
-    width: 152px !important;
+    height: 152px;
+    width: 152px;
     img {
-      height: 152px !important;
-      width: 152px !important;
+      height: 152px;
+      width: 152px;
     }
   }
 }
+
+/* Custom collection section */
+@media screen and (max-width: 1160px) { 
+  .wrapper_doll .carousel_doll {
+    grid-auto-columns: calc((100% / 3) - 9px);
+  }
+
+  .carousel_doll .card { 
+    height: 200px;   
+    padding-bottom: 15px;  
+    margin-bottom: 10px;
+  }
+  .carousel_doll .card .img {
+    height: 82px;
+    width: 82px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .carousel_doll .card:hover {
+    .img {
+      scale: 1.05;
+    }
+  }
+  .carousel_doll .card .img img {
+    width: 82px;
+    height: 82px; 
+  }
+  .wrapper_doll .carousel_doll .card h2 {
+    font-weight: 400;
+    font-size: 0.rem;
+    text-wrap: wrap; 
+  }
+  .carousel_doll .card p { 
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 900px) { 
+  .wrapper_doll .carousel_doll {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+
+  .carousel_doll .card { 
+    height: 200px;   
+    padding-bottom: 15px;  
+    margin-bottom: 10px;
+  }
+  .carousel_doll .card .img {
+    height: 82px;
+    width: 82px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .carousel_doll .card:hover {
+    .img {
+      scale: 1.05;
+    }
+  }
+  .carousel_doll .card .img img {
+    width: 82px;
+    height: 82px; 
+  }
+  .wrapper_doll .carousel_doll .card h2 {
+    font-weight: 400;
+    font-size: 0.rem;
+    text-wrap: wrap; 
+  }
+  .carousel_doll .card p { 
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) { 
+  .wrapper_doll .carousel_doll {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+
+  .carousel_doll .card { 
+    height: 200px;   
+    padding-bottom: 15px;  
+    margin-bottom: 10px;
+  }
+  .carousel_doll .card .img {
+    height: 82px;
+    width: 82px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .carousel_doll .card:hover {
+    .img {
+      scale: 1.05;
+    }
+  }
+  .carousel_doll .card .img img {
+    width: 82px;
+    height: 82px; 
+  }
+  .wrapper_doll .carousel_doll .card h2 {
+    font-weight: 400;
+    font-size: 0.rem;
+    text-wrap: wrap; 
+  }
+  .carousel_doll .card p { 
+    font-size: 0.6rem;
+  }
+}  
+/* Custom collection section */
+
+
 .carousel .card .img {
   height: 182px;
   width: 182px;
@@ -410,36 +522,112 @@ body {
   text-align: center;
   font-size: large;
 }
-
+/* done */
 @media screen and (max-width: 1160px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 4) - 9px);
+  } 
+  .carousel .card { 
+    height: 290px;   
+    padding-bottom: 15px;  
+    margin-bottom: 10px;
   }
-  .wrapper_doll .carousel_doll {
-    grid-auto-columns: calc((100% / 3) - 9px);
+  .carousel .card .img {
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .carousel .card:hover {
+    .img {
+      scale: 1.08;
+    }
+  }
+  .card .img img {
+    width: 120px;
+    height: 120px; 
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-wrap: nowrap; 
+  }
+  .carousel .card p { 
+    font-size: 0.8rem;
   }
 }
-
+/* done  */
 @media screen and (max-width: 900px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 3) - 9px);
+  } 
+  .carousel .card { 
+    height: 250px;   
+    padding-bottom: 15px;  
+    margin-bottom: 10px;
   }
-  .wrapper_doll .carousel_doll {
-    grid-auto-columns: calc((100% / 2) - 9px);
+  .carousel .card .img {
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .carousel .card:hover {
+    .img {
+      scale: 1.07;
+    }
+  }
+  .card .img img {
+    width: 120px;
+    height: 120px; 
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1rem;
+    text-wrap: nowrap; 
+  }
+  .carousel .card p { 
+    font-size: 0.8rem;
   }
 }
-
+/* done  */
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
-  }
-  .wrapper_doll .carousel_doll {
-    grid-auto-columns: calc((100% / 1) - 9px);
-  }
+  } 
 }
+/* done */
 @media screen and (max-width: 520px) {
   .wrapper .carousel {
-    grid-auto-columns: 100%;
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+  .carousel .card { 
+    height: 200px;   
+    padding-bottom: 15px;  
+    margin-bottom: 10px;
+  }
+  .carousel .card .img {
+    height: 82px;
+    width: 82px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .carousel .card:hover {
+    .img {
+      scale: 1.05;
+    }
+  }
+  .card .img img {
+    width: 82px;
+    height: 82px; 
+  }
+  .carousel .card h2 {
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-wrap: nowrap; 
+  }
+  .carousel .card p { 
+    font-size: 0.6rem;
   }
 }
 
@@ -469,4 +657,15 @@ body {
   /* width: 10px; */
   /* height: 140px; */
   background: #895f53;
+}
+
+@media (min-width: 1300px) {
+  .list_collection_1 {
+      --tw-translate-x: -13rem!important;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  .list_collection_2 {
+    --tw-translate-x: 13rem!important;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 }
