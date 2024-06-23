@@ -29,45 +29,87 @@ window.addEventListener('scroll', () => {
 });
 
 
-const wiperTrack = document.querySelector(".wiper-track");
-const wipes = Array.from(wiperTrack.children);
-const wipePrevBtn = document.querySelector(".wiper-button__right");
-const wipeNextBtn = document.querySelector(".wiper-button__left");
-const wipeWidth = wipes[0].getBoundingClientRect().width;
+// Slider
+const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
 
-const arrowsBehaviour = (wipePrevBtn, wipeNextBtn, index) => {
-  if (index === 0) {
-    wipePrevBtn.classList.add("is-hidden");
-    wipeNextBtn.classList.remove("is-hidden");
-  } else if (index === wipes.length -1) {
-    wipePrevBtn.classList.remove("is-hidden");
-    wipeNextBtn.classList.add("is-hidden");
-  } else {
-    wipePrevBtn.classList.remove("is-hidden");
-    wipeNextBtn.classList.remove("is-hidden");
-  }
-};
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
 
-const wipeSlide = (wiperTrack, activeSlide, nextSlide, targetIndex) => {
-  wiperTrack.style.transform =
-    "translateX(-" + (wipeWidth + 24) * (targetIndex -2) + "px)";
-  activeSlide.classList.remove("active-swipe");
-  activeSlide.style.transform = "scale(1)";
-  nextSlide.classList.add("active-swipe");
-  nextSlide.style.transform = "scale(1.1)";
-};
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
 
-wipeNextBtn.addEventListener("click", (e) => {
-  const activeSlide = wiperTrack.querySelector(".active-swipe");
-  const nextSlide = activeSlide.nextElementSibling;
-  const targetIndex = wipes.findIndex((slide) => slide === nextSlide);
-  wipeSlide(wiperTrack, activeSlide, nextSlide, targetIndex);
-  arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
 });
-wipePrevBtn.addEventListener("click", (e) => {
-  const activeSlide = wiperTrack.querySelector(".active-swipe");
-  const nextSlide = activeSlide.previousElementSibling;
-  const targetIndex = wipes.findIndex((slide) => slide === nextSlide);
-  wipeSlide(wiperTrack, activeSlide, nextSlide, targetIndex);
-  arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+    });
+});
+
+const dragStart = (e) => {
+    isDragging = true;
+    carousel.classList.add("dragging");
+    // Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if(!isDragging) return; // if isDragging is false return from here
+    // Updates the scroll position of the carousel based on the cursor movement
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+    isDragging = false;
+    carousel.classList.remove("dragging");
+}
+
+const infiniteScroll = () => {
+    // If the carousel is at the beginning, scroll to the end
+    if(carousel.scrollLeft === 0) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
+    }
+    // If the carousel is at the end, scroll to the beginning
+    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+    }
+
+    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+    clearTimeout(timeoutId);
+    if(!wrapper.matches(":hover")) autoPlay();
+}
+
+const autoPlay = () => {
+    if(!isAutoPlay) return;
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+}
+autoPlay();
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
