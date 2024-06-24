@@ -241,3 +241,47 @@ document.addEventListener('DOMContentLoaded', function() {
           return neonColors[Math.floor(Math.random() * neonColors.length)];
         }
   });
+
+//   Cart function
+function addToFavoriteClicked(event) {
+    var formId = event.target
+      .closest(".orderForm")
+      .getAttribute("id")
+      .replace("orderForm", "");
+    var form = document.getElementById("orderForm" + formId);
+
+    var Favor = {
+      image: form.querySelector(".deal_img").getAttribute("src"),
+      title: form.querySelector(".deal_title").textContent.trim(),
+      seller: form.querySelector(".deal_seller").textContent.trim(),
+      price: form.querySelector(".price").textContent.trim(), // Use textContent instead of value
+    };
+
+    alert("Đã thêm vào giỏ!");
+
+    localStorage.setItem("Favor_" + formId, JSON.stringify(Favor));
+  }
+
+  function addToCartClicked(event) {
+    var formId = event.target
+      .closest(".orderForm")
+      .getAttribute("id")
+      .replace("orderForm", "");
+    var form = document.getElementById("orderForm" + formId);
+    var order = {
+      deliveryInfo: "20:18, Thứ Năm 23/05/2024", // Example delivery info
+      status: "Chờ xác nhận", // Corrected status value
+      time: "20:18, Thứ Năm 23/05/2024", // Example time
+      image: form.querySelector(".deal_img").getAttribute("src"),
+      title: form.querySelector(".deal_title").textContent.trim(),
+      seller: form.querySelector(".deal_seller").textContent.trim(),
+      returnPolicy: "Đổi trả 30 ngày", // Example return policy
+      price: form.querySelector(".price").textContent.trim(), // Use textContent instead of value
+    };
+
+    // Display an alert to notify the user before proceeding
+    alert("Đã thêm vào giỏ!");
+
+    // Store order details in localStorage
+    localStorage.setItem("order_" + formId, JSON.stringify(order));
+  }

@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       height:{
         custom_sm_hero: "560px",
+        custom_1427: "1427px",
         custom_lg_hero: "93vh",
         custom_hero: "620px",
         custom_10o11: "93%",

@@ -226,7 +226,7 @@
               <div class="underline_page"></div>
             </li>
             <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
-              <a href="#about" class="nav-link">Chúng tôi</a>
+              <a href="about.html" class="nav-link">Chúng tôi</a>
               <div class="underline_page"></div>
             </li>
             <li class="m-3 md:m-0 md:mx-2 lg:mx-8">
@@ -374,7 +374,8 @@
           >
             <!--Deal 1-->
             <div
-              class="deal_1_container overflow-hidden lg:relative flex lg:flex-col flex-row items-center h-1/2"
+              class="orderForm deal_1_container overflow-hidden lg:relative flex lg:flex-col flex-row items-center h-1/2"
+              id="orderForm1"
             >
               <img
                 src="Images/pillow_handmade_1.jpg"
@@ -384,31 +385,32 @@
               <div
                 class="lg:hidden items-center text-center my-auto bg-white w-full rounded-r-lg pt-4 shadow-sm"
               >
-                <p class="text-xs md:text-base font-bold">
+                <p class="deal_title text-xs md:text-base font-bold">
                   Gối họa tiết xương rồng cute
                 </p>
-                <h6 class="text-gray-600 text-xs">Annabell</h6>
+                <h6 class="text-gray-600 text-xs deal_seller">Annabell</h6>
                 <div
                   class="flex flex-row mx-auto justify-center items-center space-x-2 pt-2"
                 >
                   <div class="text-red-700 line-through pb-2">$15</div>
-                  <div class="text-yellow-500 animate-bounce">$5</div>
+                  <div class="text-yellow-500 animate-bounce price">$5</div>
                 </div>
                 <div class="flex justify-end pb-2 pr-2 space-x-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="md:w-6 md:h-6 w-4 h-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                    />
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="md:w-6 md:h-6 w-4 h-4 cursor-pointer"
+                      onclick="addToCartClicked(event)"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                      />
+                    </svg>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -416,7 +418,8 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="md:w-6 md:h-6 w-4 h-4"
+                    class="md:w-6 md:h-6 w-4 h-4 cursor-pointer"
+                    onclick="addToFavoriteClicked(event)"
                   >
                     <path
                       stroke-linecap="round"
@@ -432,20 +435,21 @@
                 <div
                   class="bg-white rounded-md shadow-md h-3/5 flex flex-col justify-center items-center pt-2"
                 >
-                  <p class="text-xs md:text-base font-bold">
+                  <p class="text-xs md:text-base font-bold deal_title">
                     Gối họa tiết xương rồng cute
                   </p>
-                  <h6 class="text-gray-600 text-xs">Annabell</h6>
+                  <h6 class="text-gray-600 text-xs deal_seller">Annabell</h6>
                   <div
                     class="flex flex-row mx-auto justify-center items-center space-x-2 pt-2"
                   >
                     <div class="text-red-700 line-through pb-2">$15</div>
-                    <div class="text-yellow-500 animate-bounce">$5</div>
+                    <div class="text-yellow-500 animate-bounce price">$5</div>
                   </div>
                 </div>
                 <div class="flex flex-row justify-between w-full h-2/5 pt-2">
                   <div
                     class="w-1/2 mr-2 flex justify-center items-center h-full bg-white rounded-md shadow-md hover:bg-green-600 hover:text-white cursor-pointer"
+                    onclick="addToFavoriteClicked(event)"
                   >
                     <h6 class="text-md mr-2">Yêu thích</h6>
                     <svg
@@ -465,6 +469,7 @@
                   </div>
                   <div
                     class="w-1/2 ml-2 flex justify-center items-center h-full bg-white rounded-md shadow-md hover:bg-green-600 hover:text-white cursor-pointer"
+                    onclick="addToCartClicked(event)"
                   >
                     <h6 class="text-md mr-2">Thêm vào giỏ</h6>
                     <svg
@@ -487,18 +492,21 @@
             </div>
             <!--Deal 2-->
             <div
-              class="deal_2_container relative overflow-hidden flex lg:flex-col flex-row items-center justify-end h-1/2"
+              class="orderForm deal_2_container relative overflow-hidden flex lg:flex-col flex-row items-center justify-end h-1/2"
+              id="orderForm2"
             >
               <div
                 class="lg:hidden items-center text-center my-auto bg-white w-full rounded-l-lg pt-4 shadow-sm"
               >
-                <p class="text-xs md:text-base font-bold">Tiêu bản bươm bướm</p>
-                <h6 class="text-gray-600 text-xs">Luffy</h6>
+                <p class="deal_title text-xs md:text-base font-bold deal_title">
+                  Tiêu bản bươm bướm
+                </p>
+                <h6 class="text-gray-600 text-xs deal_seller">Luffy</h6>
                 <div
                   class="flex flex-row mx-auto justify-center items-center space-x-2 pt-2"
                 >
                   <div class="text-red-700 line-through pb-2">$35</div>
-                  <div class="text-yellow-500 animate-bounce">$25</div>
+                  <div class="text-yellow-500 animate-bounce price">$25</div>
                 </div>
                 <div class="flex justify-start pb-2 pl-2 space-x-1">
                   <svg
@@ -507,7 +515,8 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="md:w-6 md:h-6 w-4 h-4"
+                    class="md:w-6 md:h-6 w-4 h-4 cursor-pointer"
+                    onclick="addToCartClicked(event)"
                   >
                     <path
                       stroke-linecap="round"
@@ -522,7 +531,8 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="md:w-6 md:h-6 w-4 h-4"
+                    class="md:w-6 md:h-6 w-4 h-4 cursor-pointer"
+                    onclick="addToFavoriteClicked(event)"
                   >
                     <path
                       stroke-linecap="round"
@@ -543,20 +553,21 @@
                 <div
                   class="bg-white rounded-md shadow-md h-3/5 flex flex-col justify-center items-center pt-2"
                 >
-                  <p class="text-xs md:text-base font-bold">
+                  <p class="text-xs md:text-base font-bold deal_title">
                     Tiêu bản bươm bướm
                   </p>
-                  <h6 class="text-xs">Luffy</h6>
+                  <h6 class="text-xs deal_seller">Luffy</h6>
                   <div
                     class="flex flex-row mx-auto justify-center items-center space-x-2 pt-2"
                   >
                     <div class="text-red-700 line-through pb-2">$35</div>
-                    <div class="text-yellow-500 animate-bounce">$25</div>
+                    <div class="text-yellow-500 animate-bounce   price">$25</div>
                   </div>
                 </div>
                 <div class="flex flex-row justify-between w-full h-2/5 pt-2">
                   <div
                     class="w-1/2 mr-2 flex justify-center items-center h-full bg-white rounded-md shadow-md hover:bg-green-600 hover:text-white cursor-pointer"
+                    onclick="addToFavoriteClicked(event)"
                   >
                     <h6 class="text-md mr-2">Yêu thích</h6>
                     <svg
@@ -576,6 +587,7 @@
                   </div>
                   <div
                     class="w-1/2 ml-2 flex justify-center items-center h-full bg-white rounded-md shadow-md hover:bg-green-600 hover:text-white cursor-pointer"
+                    onclick="addToCartClicked(event)"
                   >
                     <h6 class="text-md mr-2">Thêm vào giỏ</h6>
                     <svg
@@ -649,12 +661,14 @@
           >
             <!--Product 1-->
             <div
-              class="pro_container py-3 md:py-5 w-2/5 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+              class="orderForm pro_container py-3 md:py-5 w-2/5 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+              id="orderForm3"
               data-aos="fade-up"
               data-aos-delay="150"
             >
               <div
                 class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToCartClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào giỏ hàng
@@ -676,6 +690,7 @@
               </div>
               <div
                 class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToFavoriteClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào yêu thích
@@ -697,31 +712,37 @@
               </div>
               <a
                 data-fancybox="img_product"
-                class="img_product"
+                class="img_product deal_img"
                 href="Images/product.jpg"
                 ><img
                   src="Images/product.jpg"
                   alt=""
                   class="img_pro_1 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
               /></a>
-              <h3 class="font-bold mt- text-sm md:text_md2">Trái tim trang trí</h3>
-              <div class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto">
+              <h3 class="font-bold mt- text-sm md:text_md2 deal_title">
+                Trái tim trang trí
+              </h3>
+              <div
+                class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto price"
+              >
                 $5
               </div>
               <div
-                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5 deal_seller"
               >
                 Cửa hàng: Lena_01
               </div>
             </div>
             <!-- Product 2 -->
             <div
-              class="pro_container py-3 md:py-5 w-2/5 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
+              class="orderForm pro_container py-3 md:py-5 w-2/5 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex flex-col shadow-2xl"
               data-aos="fade-up"
               data-aos-delay="200"
+              id="orderForm4"
             >
               <div
-                class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                class=" option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToCartClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào giỏ hàng
@@ -743,6 +764,7 @@
               </div>
               <div
                 class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToFavoriteClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào yêu thích
@@ -764,31 +786,35 @@
               </div>
               <a
                 data-fancybox="img_product"
-                class="img_product"
+                class="img_product deal_img"
                 href="Images/product_2.jpg"
                 ><img
                   src="Images/product_2.jpg"
                   alt=""
                   class="img_pro_2 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5 hover:w-4/5"
               /></a>
-              <h3 class="font-bold mt- text-sm md:text_md2">Ngôi nhà socola</h3>
-              <div class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto">
+              <h3 class="font-bold mt- text-sm md:text_md2 deal_title">Ngôi nhà socola</h3>
+              <div
+                class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto price"
+              >
                 $10
               </div>
               <div
-                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5 deal_seller" 
               >
                 Cửa hàng: Andrew_01
               </div>
             </div>
             <!-- Product 3 -->
             <div
-              class="pro_container py-3 md:py-5 w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex-col shadow-2xl hidden md:flex"
+              class="orderForm pro_container py-3 md:py-5 w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex-col shadow-2xl hidden md:flex"
+              id="orderForm5"
               data-aos="fade-up"
               data-aos-delay="250"
             >
               <div
                 class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToCartClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào giỏ hàng
@@ -810,6 +836,7 @@
               </div>
               <div
                 class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToFavoriteClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào yêu thích
@@ -831,31 +858,37 @@
               </div>
               <a
                 data-fancybox="img_product"
-                class="img_product"
+                class="img_product deal_img"
                 href="Images/product_3.jpg"
                 ><img
                   src="Images/product_3.jpg"
                   alt=""
                   class="img_pro_3 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
               /></a>
-              <h3 class="font-bold mt- text-sm md:text_md2">Nón lá với hoa văn</h3>
-              <div class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto">
+              <h3 class="font-bold mt- text-sm md:text_md2 deal_title">
+                Nón lá với hoa văn
+              </h3>
+              <div
+                class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto price"
+              >
                 $3
               </div>
               <div
-                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5 deal_seller"
               >
                 Cửa hàng: Lena_01
               </div>
             </div>
             <!-- Product 4 -->
             <div
-              class="pro_container py-3 md:py-5 hidden w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg lg:flex flex-col shadow-2xl"
+              class="orderForm pro_container py-3 md:py-5 hidden w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg lg:flex flex-col shadow-2xl"
+              id="orderForm6"
               data-aos="fade-up"
               data-aos-delay="300"
             >
               <div
                 class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToCartClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào giỏ hàng
@@ -877,6 +910,7 @@
               </div>
               <div
                 class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToFavoriteClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào yêu thích
@@ -898,31 +932,35 @@
               </div>
               <a
                 data-fancybox="img_product"
-                class="img_product"
+                class="img_product deal_img"
                 href="Images/product_5.jpg"
                 ><img
                   src="Images/product_5.jpg"
                   alt=""
                   class="img_pro_4 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
               /></a>
-              <h3 class="font-bold mt- text-sm md:text_md2">Lọ ánh sáng</h3>
-              <div class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto">
+              <h3 class="font-bold mt- text-sm md:text_md2 deal_title">Lọ ánh sáng</h3>
+              <div
+                class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto price"
+              >
                 $15
               </div>
               <div
-                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5 deal_seller"
               >
                 Cửa hàng: Marco
               </div>
             </div>
             <!-- Product 5 -->
             <div
-              class="pro_container py-3 md:py-5 hidden md:flex w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex-col shadow-2xl"
+              class="orderForm pro_container py-3 md:py-5 hidden md:flex w-1/4 lg:w-1/6 md:w-1/5 min-h-full border-gray-100 border rounded-lg flex-col shadow-2xl"
+              id="orderForm7"
               data-aos="fade-up"
               data-aos-delay="350"
             >
               <div
                 class="option_1 cursor-pointer text-black justify-around flex flex-col font-bold text-sm top-2/3 h-12 md:h-16 rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToCartClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào giỏ hàng
@@ -944,6 +982,7 @@
               </div>
               <div
                 class="option_2 cursor-pointer text-black justify-around flex flex-col font-bold text-sm mt-2 h-12 md:h-16 md:mt-5 top-1/3 absolute rounded-md bg-gray-50 shadow-xl invisible w-4/5 hover:bg-green-700 hover:text-white"
+                onclick="addToFavoriteClicked(event)"
               >
                 <div class="flex flex-row mx-auto">
                   Thêm vào yêu thích
@@ -965,19 +1004,21 @@
               </div>
               <a
                 data-fancybox="img_product"
-                class="img_product"
+                class="img_product deal_img"
                 href="Images/product_11.jpg"
                 ><img
                   src="Images/product_11.jpg"
                   alt=""
                   class="img_pro_5 mx-auto rounded-md h-24 md:h-36 lg:h-44 w-4/5"
               /></a>
-              <h3 class="font-bold">Ti text-sm md:text_mdêu bản ngài</h3>
-              <div class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto">
+              <h3 class="font-bold deal_title">Tiêu bản ngài</h3>
+              <div
+                class="cost text-sm_pro bg md:text-md-gray-200 rounded-xl px-2 w-fit mx-auto price"
+              >
                 $50
               </div>
-              <div
-                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5"
+              <div 
+                class="maker flex flex-row justify-end mt-2 mb-2 text-end text-xs mr-5 deal_seller" 
               >
                 Cửa hàng: Mr.Tran
               </div>
@@ -1062,7 +1103,8 @@
         <div class="wrapper w-full mx-auto">
           <ul class="carousel">
             <li
-              class="card relative -z-0"
+              class="orderForm card relative -z-0"
+              id="orderForm8"
               data-aos="fade-up"
               data-aos-delay="150"
             >
@@ -1076,7 +1118,8 @@
               <div
                 class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
               >
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToFavoriteClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1110,7 +1153,8 @@
                   </svg>
                   Xem thông tin
                 </div>
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToCartClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1129,24 +1173,28 @@
                 </div>
               </div>
               <div class="img">
-                <img src="Images/furniture_1.jpg" alt="img" draggable="false" />
+                <img class="deal_img" src="Images/furniture_1.jpg" alt="img" draggable="false" />
               </div>
-              <h2>Ghế đẩu cao</h2>
+              <h2 class="deal_title">Ghế đẩu cao</h2>
               <div class="flex space-x-2">
-                <div class="text-red-700 text-sm md:text_md line-through pb-2">$300</div>
-                <div class="cost text-sm md:text-md">$225</div>
+                <div class="text-red-700 text-sm md:text_md line-through pb-2">
+                  $300
+                </div>
+                <div class="cost text-sm md:text-md price">$225</div>
               </div>
-              <p>Dr Stone</p>
+              <p class="deal_seller">Dr Stone</p>
             </li>
             <li
-              class="card relative -z-0"
+              class="orderForm card relative -z-0"
+              id="orderForm9"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <div
                 class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
               >
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToFavoriteClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1180,7 +1228,8 @@
                   </svg>
                   Xem thông tin
                 </div>
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToCartClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1199,21 +1248,23 @@
                 </div>
               </div>
               <div class="img">
-                <img src="Images/furniture_2.jpg" alt="img" draggable="false" />
+                <img class="deal_img" src="Images/furniture_2.jpg" alt="img" draggable="false" />
               </div>
-              <h2>Ghế đọc sách</h2> 
-              <div class="cost text-sm md:text-md">$225</div>
-              <p>Dr Stone</p>
+              <h2 class="deal_title">Ghế đọc sách</h2>
+              <div class="cost text-sm md:text-md price">$225</div>
+              <p class="deal_seller">Dr Stone</p>
             </li>
             <li
-              class="card relative -z-0"
+              class="orderForm card relative -z-0"
+              id="orderForm10"
               data-aos="fade-up"
               data-aos-delay="250"
             >
               <div
                 class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
               >
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToFavoriteClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1247,7 +1298,8 @@
                   </svg>
                   Xem thông tin
                 </div>
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToCartClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1266,22 +1318,24 @@
                 </div>
               </div>
               <div class="img">
-                <img src="Images/furniture_3.jpg" alt="img" draggable="false" />
+                <img class="deal_img" src="Images/furniture_3.jpg" alt="img" draggable="false" />
               </div>
 
-              <h2>Bàn gỗ sồi</h2> 
-              <div class="cost text-sm md:text-md">$225</div>
-              <p>Dr Nguyen</p>
+              <h2 class="deal_title">Bàn gỗ sồi</h2>
+              <div class="cost text-sm md:text-md price">$225</div>
+              <p class="deal_seller">Dr Nguyen</p>
             </li>
             <li
-              class="card relative -z-0"
+              class="orderForm card relative -z-0"
+              id="orderForm11"
               data-aos="fade-up"
               data-aos-delay="300"
             >
               <div
                 class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
               >
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToFavoriteClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1315,7 +1369,8 @@
                   </svg>
                   Xem thông tin
                 </div>
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToCartClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1334,24 +1389,28 @@
                 </div>
               </div>
               <div class="img">
-                <img src="Images/furniture_4.jpg" alt="img" draggable="false" />
+                <img class="deal_img" src="Images/furniture_4.jpg" alt="img" draggable="false" />
               </div>
-              <h2>Bộ bàn ghế vân sam</h2>
+              <h2 class="deal_title">Bộ bàn ghế vân sam</h2>
               <div class="flex space-x-2">
-                <div class="text-red-700 text-sm md:text_md line-through pb-2">$300</div>
-                <div class="cost text-sm md:text-md">$225</div>
+                <div class="text-red-700 text-sm md:text_md line-through pb-2">
+                  $300
+                </div>
+                <div class="cost text-sm md:text-md price">$225</div>
               </div>
-              <p>Dr Stone</p>
+              <p class="deal_seller">Dr Stone</p>
             </li>
             <li
-              class="card relative -z-0"
+              class="orderForm card relative -z-0"
+              id="orderForm12"
               data-aos="fade-up"
               data-aos-delay="350"
             >
               <div
                 class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
               >
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToFavoriteClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1385,7 +1444,8 @@
                   </svg>
                   Xem thông tin
                 </div>
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToCartClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1404,22 +1464,24 @@
                 </div>
               </div>
               <div class="img">
-                <img src="Images/furniture_5.jpg" alt="img" draggable="false" />
+                <img class="deal_img" src="Images/furniture_5.jpg" alt="img" draggable="false" />
               </div>
 
-              <h2>Ghế hoàng gia</h2> 
-              <div class="cost text-sm md:text-md">$999</div>
-              <p>Dr Kim</p>
+              <h2 class="deal_title">Ghế hoàng gia</h2>
+              <div class="cost text-sm md:text-md price">$999</div>
+              <p class="deal_seller">Dr Kim</p>
             </li>
             <li
-              class="card relative -z-0"
+              class="orderForm card relative -z-0"
+              id="orderForm13"
               data-aos="fade-up"
               data-aos-delay="400"
             >
               <div
                 class="option_contain text-sm flex flex-row bottom-3 w-full justify-around mx-auto items-center text-center"
               >
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToFavoriteClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1453,7 +1515,8 @@
                   </svg>
                   Xem thông tin
                 </div>
-                <div class="card_option hover:bg-green-500 hover:text-white">
+                <div class="card_option hover:bg-green-500 hover:text-white"
+                onclick="addToCartClicked(event)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1472,12 +1535,12 @@
                 </div>
               </div>
               <div class="img">
-                <img src="Images/furniture_6.jpg" alt="img" draggable="false" />
+                <img class="deal_img" src="Images/furniture_6.jpg" alt="img" draggable="false" />
               </div>
 
-              <h2>Giá để giày</h2> 
-              <div class="cost text-sm md:text-md">$225</div>
-              <p>Dr Stone</p>
+              <h2 class="deal_title">Giá để giày</h2>
+              <div class="cost text-sm md:text-md price">$225</div>
+              <p class="deal_seller">Dr Stone</p>
             </li>
           </ul>
         </div>
@@ -1486,12 +1549,16 @@
 
     <section class="w-full py-10 md:py-20 h-fit overflow-hidden">
       <!--List 1-->
-      <div class="list_collection_1 flex h-full lg:-translate-x-32 justify-center items-center">
+      <div
+        class="list_collection_1 flex h-full lg:-translate-x-32 justify-center items-center"
+      >
         <!-- HEad  -->
         <div
           class="rounded-full shadow-md bg-sub_brand h-full w-custom_560px z-10 flex flex-col justify-center items-end pb-4"
         >
-          <p class="float-end md:mr-28 mt-5 mx-auto text-white text-lg md:text-2xl font-bold">
+          <p
+            class="float-end md:mr-28 mt-5 mx-auto text-white text-lg md:text-2xl font-bold"
+          >
             Bộ sưu tập
           </p>
           <img
@@ -1499,12 +1566,14 @@
             class="w-1/3 my-3 mx-auto md:mr-24 rounded-md float-end"
             alt=""
           />
-          <p class="float-end md:mr-36 mx-auto text-white text-lg md:text-2xl font-bold">
+          <p
+            class="float-end md:mr-36 mx-auto text-white text-lg md:text-2xl font-bold"
+          >
             búp bê
           </p>
         </div>
         <!-- List  -->
-        <div class=" w-3/5 h-full -translate-x-20 z-0 flex items-center">
+        <div class="w-3/5 h-full -translate-x-20 z-0 flex items-center">
           <div
             class="h-4/6 w-full rounded-xl shadow-lg bg-white flex justify-end pt-2 px-2"
           >
@@ -1586,7 +1655,11 @@
                     </div>
                     <h2>Ghế đẩu cao</h2>
                     <div class="flex space-x-2">
-                      <div class="text-red-700 text-sm md:text_md line-through pb-2">$300</div>
+                      <div
+                        class="text-red-700 text-sm md:text_md line-through pb-2"
+                      >
+                        $300
+                      </div>
                       <div class="cost text-sm md:text-md">$225</div>
                     </div>
                     <p>Dr Stone</p>
@@ -1664,7 +1737,7 @@
                         draggable="false"
                       />
                     </div>
-                    <h2>Ghế đọc sách</h2> 
+                    <h2>Ghế đọc sách</h2>
                     <div class="cost text-sm md:text-md">$225</div>
                     <p>Dr Stone</p>
                   </li>
@@ -1742,7 +1815,7 @@
                       />
                     </div>
 
-                    <h2>Bàn gỗ sồi</h2> 
+                    <h2>Bàn gỗ sồi</h2>
                     <div class="cost text-sm md:text-md">$225</div>
                     <p>Dr Nguyen</p>
                   </li>
@@ -1821,7 +1894,11 @@
                     </div>
                     <h2>Bộ bàn ghế vân sam</h2>
                     <div class="flex space-x-2">
-                      <div class="text-red-700 text-sm md:text_md line-through pb-2">$300</div>
+                      <div
+                        class="text-red-700 text-sm md:text_md line-through pb-2"
+                      >
+                        $300
+                      </div>
                       <div class="cost text-sm md:text-md">$225</div>
                     </div>
                     <p>Dr Stone</p>
@@ -1900,7 +1977,7 @@
                       />
                     </div>
 
-                    <h2>Ghế hoàng gia</h2> 
+                    <h2>Ghế hoàng gia</h2>
                     <div class="cost text-sm md:text-md">$999</div>
                     <p>Dr Kim</p>
                   </li>
@@ -1978,7 +2055,7 @@
                       />
                     </div>
 
-                    <h2>Giá để giày</h2> 
+                    <h2>Giá để giày</h2>
                     <div class="cost text-sm md:text-md">$225</div>
                     <p>Dr Stone</p>
                   </li>
@@ -2001,11 +2078,15 @@
       </div>
 
       <!--List 2-->
-      <div class="list_collection_2 flex h-full lg:translate-x-32 mt-32 justify-center items-center">
+      <div
+        class="list_collection_2 flex h-full lg:translate-x-32 mt-32 justify-center items-center"
+      >
         <div
           class="rounded-full shadow-md bg-sub_brand h-full w-custom_560px z-10 flex flex-col justify-center items-start order-3 pb-4"
         >
-          <p class="float-end md:ml-28 mt-5 mx-auto text-white text-2xl font-bold">
+          <p
+            class="float-end md:ml-28 mt-5 mx-auto text-white text-2xl font-bold"
+          >
             Bộ sưu tập
           </p>
           <img
@@ -2099,7 +2180,11 @@
                     </div>
                     <h2>Ghế đẩu cao</h2>
                     <div class="flex space-x-2">
-                      <div class="text-red-700 text-sm md:text_md line-through pb-2">$300</div>
+                      <div
+                        class="text-red-700 text-sm md:text_md line-through pb-2"
+                      >
+                        $300
+                      </div>
                       <div class="cost text-sm md:text-md">$225</div>
                     </div>
                     <p>Dr Stone</p>
@@ -2177,7 +2262,7 @@
                         draggable="false"
                       />
                     </div>
-                    <h2>Ghế đọc sách</h2> 
+                    <h2>Ghế đọc sách</h2>
                     <div class="cost text-sm md:text-md">$225</div>
                     <p>Dr Stone</p>
                   </li>
@@ -2255,7 +2340,7 @@
                       />
                     </div>
 
-                    <h2>Bàn gỗ sồi</h2> 
+                    <h2>Bàn gỗ sồi</h2>
                     <div class="cost text-sm md:text-md">$225</div>
                     <p>Dr Nguyen</p>
                   </li>
@@ -2334,7 +2419,11 @@
                     </div>
                     <h2>Bộ bàn ghế vân sam</h2>
                     <div class="flex space-x-2">
-                      <div class="text-red-700 text-sm md:text_md line-through pb-2">$300</div>
+                      <div
+                        class="text-red-700 text-sm md:text_md line-through pb-2"
+                      >
+                        $300
+                      </div>
                       <div class="cost text-sm md:text-md">$225</div>
                     </div>
                     <p>Dr Stone</p>
@@ -2413,7 +2502,7 @@
                       />
                     </div>
 
-                    <h2>Ghế hoàng gia</h2> 
+                    <h2>Ghế hoàng gia</h2>
                     <div class="cost text-sm md:text-md">$999</div>
                     <p>Dr Kim</p>
                   </li>
@@ -2491,7 +2580,7 @@
                       />
                     </div>
 
-                    <h2>Giá để giày</h2> 
+                    <h2>Giá để giày</h2>
                     <div class="cost text-sm md:text-md">$225</div>
                     <p>Dr Stone</p>
                   </li>
@@ -2507,9 +2596,7 @@
           <div
             class="bubble right-0 w-8 h-8 rounded-full -translate-x-20 translate-y-14"
           ></div>
-          <div
-            class="bubble right-0 w-3 h-3 rounded-full translate-y-14"
-          ></div>
+          <div class="bubble right-0 w-3 h-3 rounded-full translate-y-14"></div>
         </div>
       </div>
     </section>
